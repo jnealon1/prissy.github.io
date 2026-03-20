@@ -6,14 +6,12 @@
 <title>Prissy Princess | Cybersecurity Portfolio</title>
 
 <style>
-/* GENERAL STYLING */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
     display: flex;
-    transition: background-color 0.3s ease;
 }
 
 /* SIDEBAR */
@@ -26,44 +24,42 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    padding: 20px;
+    text-align: center;
 }
 
 .sidebar img {
     width: 120px;
     border-radius: 50%;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-}
-
-.sidebar img:hover {
-    transform: scale(1.05);
+    margin-bottom: 15px;
 }
 
 .sidebar h2 {
-    font-size: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+}
+
+.sidebar p {
+    font-size: 14px;
+    margin-bottom: 30px;
 }
 
 .sidebar a {
     color: white;
     text-decoration: none;
-    padding: 12px 20px;
+    padding: 12px;
     width: 100%;
     text-align: left;
     border-left: 4px solid transparent;
-    margin-bottom: 5px;
     transition: all 0.3s ease;
-    font-weight: bold;
 }
 
 .sidebar a:hover {
     background-color: #3e4160;
-    border-left: 4px solid #00aaff; /* accent color */
-    padding-left: 24px;
+    border-left: 4px solid #4da6ff;
+    padding-left: 18px;
 }
 
-/* MAIN CONTENT */
+/* MAIN */
 .main-content {
     margin-left: 250px;
     padding: 40px;
@@ -71,105 +67,52 @@ body {
 }
 
 section {
-    margin-bottom: 60px;
-    padding: 20px 30px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background: white;
     border-radius: 8px;
-    background-color: #ffffff;
+    border-left: 6px solid #4da6ff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left 0.3s ease;
-    border-left: 6px solid transparent;
 }
 
-/* Accent colors for each section */
-#about { border-left-color: #00aaff; }
-#education { border-left-color: #ffaa00; }
-#experience { border-left-color: #00cc77; }
-#certifications { border-left-color: #ff0077; }
-#contact { border-left-color: #7700ff; }
-
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* HEADINGS */
+/* TEXT */
 h1, h2 {
-    color: #222;
-}
-
-h1 {
-    font-size: 36px;
     margin-bottom: 10px;
 }
 
-h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-/* TEXT & LISTS */
 p, ul {
-    font-size: 16px;
+    margin: 5px 0;
     line-height: 1.6;
-    margin: 0 0 10px 0;
 }
 
-ul li {
-    margin-bottom: 5px;
+/* EXPERIENCE SPACING */
+.job {
+    margin-bottom: 25px;
 }
 
-/* BUTTON */
-button {
-    padding: 10px 20px;
-    background-color: #00aaff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.job-title {
+    font-weight: bold;
 }
 
-button:hover {
-    background-color: #0077cc;
+.job-info {
+    font-size: 14px;
+    color: #555;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
+    body { flex-direction: column; }
 
     .sidebar {
         width: 100%;
         height: auto;
         flex-direction: row;
         justify-content: space-around;
-        padding: 10px 0;
-    }
-
-    .sidebar img {
-        display: none;
     }
 
     .main-content {
         margin-left: 0;
-        padding: 20px;
         width: 100%;
-    }
-
-    .sidebar a {
-        text-align: center;
-        border-left: none;
-        margin-bottom: 0;
-    }
-
-    .sidebar a:hover {
-        border-left: none;
-        background-color: #3e4160;
-    }
-
-    section {
-        border-left: 6px solid transparent; /* keep accents hidden on small screens */
     }
 }
 </style>
@@ -181,7 +124,9 @@ button:hover {
 <div class="sidebar">
     <img src="profile.jpg" alt="Prissy Princess">
     <h2>Prissy Princess</h2>
-    <a href="#about">About Me</a>
+    <p>Cybersecurity Student | Information Security | Risk & Threat Analysis</p>
+
+    <a href="#home">Home</a>
     <a href="#education">Education</a>
     <a href="#experience">Experience</a>
     <a href="#certifications">Certifications</a>
@@ -191,60 +136,52 @@ button:hover {
 <!-- MAIN CONTENT -->
 <div class="main-content">
 
-    <!-- ABOUT ME -->
-    <section id="about">
-        <h1>About Me</h1>
-        <p>I’m Prissy. After experiencing a cyber-related scam in which individuals impersonated a well-known company and stole funds, I became deeply interested in understanding how such attacks occur and how they can be prevented. What began as a challenging experience quickly evolved into a strong motivation to learn more about cybercrime and digital security.
-           In 2024, I returned to school to formally pursue cybersecurity. Since then, I have been dedicated to building my knowledge in areas such as network security, threat analysis, and ethical hacking. I enjoy learning Linux, Python, and cloud infrastructure while continuing to build technical skills. 
-           I am committed to applying my skills and experience to enhance digital security and support individuals and organizations in protecting against evolving cyber threats.</p>
+    <!-- HOME (no header title shown) -->
+    <section id="home">
+        <p>I’m Prissy. After experiencing a cyber-related scam in which individuals impersonated a well-known company and stole funds, I became deeply interested in understanding how such attacks occur and how they can be prevented.
+
+        In 2024, I returned to school to pursue cybersecurity and have been building skills in network security, threat analysis, and ethical hacking. I am passionate about protecting systems and helping organizations defend against cyber threats.</p>
     </section>
 
     <!-- EDUCATION -->
     <section id="education">
         <h2>Education</h2>
-        <p><b>Olive-Harvey College – Chicago, IL</b></p>
-        <p>Pursuing Associate in Applied Science</p>
-        <p>Expected Graduation: May 2026</p>
-        <p><b>Western Illinois University – Macomb, IL</b></p>
-        <p>Health Services Management</p>
-        <p>Graduated: May 2013</p>
+
+        <p>🎓 Associate in Applied Science in Cybersecurity, 2026</p>
+        <p>Olive-Harvey College</p>
+
+        <p>🎓 Bachelor of Science in Health Services Management, 2013</p>
+        <p>Western Illinois University</p>
     </section>
 
     <!-- EXPERIENCE -->
     <section id="experience">
         <h2>Experience</h2>
 
-        <p><b>Correctional Officer – Cook County Sheriff's Department</b></p>
-        <ul>
-            <li>Investigated welfare fraud cases using internal systems and databases to detect misuse of public assistance funds.</li>
-            <li>Applied analytical and investigative techniques to identify risks and prevent fraud.</li>
-            <li>Implemented security best practices to safeguard sensitive data and maintain secure systems.</li>
-            <li>Performed daily security checks, identified potential risks, and took proactive measures to maintain a secure environment in accordance with security protocols.</li>
-        </ul>
+        <div class="job">
+            <p class="job-title">Correctional Officer</p>
+            <p>Cook County Sheriff's Department</p>
+            <p class="job-info">August 2019 – August 2023 | Chicago, IL</p>
+        </div>
 
-        <p><b>Human Services Caseworker – Illinois Department of Human Services</b></p>
-        <ul>
-            <li>Investigated human services cases related to welfare fraud using internal databases and systems to detect misuse and protect program integrity.</li>
-            <li>Applied analytical and investigative techniques to identify risks, detect fraud, and mitigate threats to public assistance programs.</li>
-            <li>Conducted audits and investigations to verify eligibility and ensure compliance with program regulations.</li>
-            <li>Maintained organized records and documentation to support compliance requirements and regulatory audits.</li>
-        </ul>
+        <div class="job">
+            <p class="job-title">Human Services Caseworker</p>
+            <p>Illinois Department of Human Services</p>
+            <p class="job-info">January 2019 – August 2019 | Illinois</p>
+        </div>
 
-        <p><b>TANF Caseworker – Illinois Department of Human Services</b></p>
-        <ul>
-            <li>Managed sensitive client information while ensuring compliance with privacy laws and data protection requirements.</li>
-            <li>Monitored program eligibility systems and verified documentation to ensure regulatory compliance.</li>
-            <li>Collaborated with Public Health divisions and state agencies while managing sensitive client data and ensuring secure storage and compliance with privacy laws.</li>
-            <li>Managed caseload data and updated eligibility systems to maintain accurate records and ensure compliance with program regulations.</li>
-        </ul>
+        <div class="job">
+            <p class="job-title">TANF Caseworker</p>
+            <p>Illinois Department of Human Services</p>
+            <p class="job-info">September 2018 – January 2019 | Illinois</p>
+        </div>
 
-        <p><b>Social Service Career Trainee – Illinois Department of Human Services</b></p>
-        <ul>
-            <li>Handled confidential financial, medical, and criminal history data while applying strict data protection and access control measures to safeguard sensitive information.</li>
-            <li>Analyzed case data and collaborated with cross-functional teams to ensure accuracy and compliance with regulatory requirements.</li>
-            <li>Identified potential risks during case reviews and supported mitigation strategies to maintain program integrity.</li>
-            <li>Collected and processed sensitive financial, medical, and personal data while following strict confidentiality and security standards.</li>
-        </ul>
+        <div class="job">
+            <p class="job-title">Social Service Career Trainee</p>
+            <p>Illinois Department of Human Services</p>
+            <p class="job-info">September 2017 – September 2018 | Illinois</p>
+        </div>
+
     </section>
 
     <!-- CERTIFICATIONS -->
@@ -261,7 +198,7 @@ button:hover {
     <section id="contact">
         <h2>Contact</h2>
         <p>Email: your.email@example.com<br>
-          GitHub: <a href="#" target="_blank">github.com/yourusername</a></p>
+        GitHub: <a href="#">github.com/yourusername</a></p>
     </section>
 
 </div>
