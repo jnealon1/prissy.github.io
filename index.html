@@ -1,4 +1,6 @@
 
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,13 +11,11 @@
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <style>
-/* GENERAL STYLES */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
-    display: flex;
 }
 
 /* SIDEBAR */
@@ -34,32 +34,23 @@ body {
     text-align: center;
 }
 
-/* SIDEBAR PROFILE PHOTO */
-.profile-photo {
-    width: 150px;
-    height: 150px;
+/* PROFILE IMAGE & NAME */
+.sidebar img {
+    width: 120px;
     border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    border: 3px solid #fff;
-    transition: all 0.3s ease;
-}
-
-.profile-photo:hover {
-    box-shadow: 0 0 30px 8px #00aaff, 0 4px 15px rgba(0,0,0,0.3);
-    transform: scale(1.05);
+    margin-bottom: 10px;
 }
 
 .sidebar h2 {
-    margin: 10px 0 5px 0;
+    margin: 5px 0;
     color: white;
 }
 
 .sidebar p {
     font-size: 14px;
     margin-bottom: 15px;
+    text-align: center;
     color: #b0b3c6;
-    line-height: 1.4;
 }
 
 /* ICON LINKS */
@@ -79,14 +70,29 @@ body {
     color: #4da6ff;
 }
 
+/* RESUME BUTTON */
+.sidebar a.resume-link {
+    display: block;
+    padding: 8px 12px;
+    background-color: #4da6ff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.sidebar a.resume-link:hover {
+    background-color: #357acc;
+}
+
 /* MAIN CONTENT */
 .main-content {
     margin-left: 240px;
     padding: 40px;
-    flex: 1;
 }
 
-/* NAV LINKS */
+/* NAV LINKS (top of main content) */
 .nav-links {
     display: flex;
     gap: 20px;
@@ -141,9 +147,6 @@ p, ul {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
     .main-content {
         margin-left: 0;
         padding: 20px;
@@ -157,8 +160,8 @@ p, ul {
         padding: 10px;
     }
     .sidebar img {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        margin-bottom: 0;
     }
     .sidebar h2, .sidebar p {
         display: none;
@@ -171,16 +174,12 @@ p, ul {
 
 <!-- SIDEBAR -->
 <div class="sidebar">
-    <!-- PROFILE PHOTO -->
-    <img src="PPhoto.png" alt="My Photo">
-
-    <!-- NAME -->
+<img src="images/PPhoto.png" alt="My Photo">
+    
     <h2>Prissy Princess</h2>
-
-    <!-- PROFESSIONAL TITLE / CAPTION -->
+    
     <p>Cybersecurity Student | Information Security | Risk & Threat Analysis</p>
 
-    <!-- SOCIAL ICONS -->
     <div class="icon-links">
         <a href="https://github.com/YourGitHubUsername" target="_blank" class="icon-link">
             <i class="fab fa-github"></i>
@@ -189,6 +188,8 @@ p, ul {
             <i class="fas fa-envelope"></i>
         </a>
     </div>
+
+    <a href="resume.pdf" class="resume-link" target="_blank">Download Resume</a>
 </div>
 
 <!-- MAIN CONTENT -->
@@ -221,7 +222,6 @@ p, ul {
         <p>🎓 Bachelor of Science in Health Services Management, 2013</p>
         <p>Western Illinois University</p>
     </section>
-
 <!-- EXPERIENCE -->
 <section id="experience">
     <h2>Experience</h2>
@@ -278,6 +278,8 @@ Collaborate with internal teams to address safety concerns and support investiga
 </section>
 
 
+    </section>
+
     <!-- CERTIFICATIONS -->
     <section id="certifications">
         <h2>Certifications</h2>
@@ -296,17 +298,3 @@ Collaborate with internal teams to address safety concerns and support investiga
     </section>
 
 </div>
-
-</body>
-</html>
-   </a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Prissy Princess | Cybersecurity Portfolio</p>
-</footer>
-
-</body>
-</html>
-        
