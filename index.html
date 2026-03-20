@@ -76,14 +76,23 @@ section {
     border-radius: 8px;
     background-color: #ffffff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left 0.3s ease;
+    border-left: 6px solid transparent;
 }
+
+/* Accent colors for each section */
+#about { border-left-color: #00aaff; }
+#education { border-left-color: #ffaa00; }
+#experience { border-left-color: #00cc77; }
+#certifications { border-left-color: #ff0077; }
+#contact { border-left-color: #7700ff; }
 
 section:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
+/* HEADINGS */
 h1, h2 {
     color: #222;
 }
@@ -98,6 +107,7 @@ h2 {
     margin-bottom: 15px;
 }
 
+/* TEXT & LISTS */
 p, ul {
     font-size: 16px;
     line-height: 1.6;
@@ -156,6 +166,10 @@ button:hover {
     .sidebar a:hover {
         border-left: none;
         background-color: #3e4160;
+    }
+
+    section {
+        border-left: 6px solid transparent; /* keep accents hidden on small screens */
     }
 }
 </style>
