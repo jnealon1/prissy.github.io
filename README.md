@@ -89,7 +89,7 @@
 <header> 
     <h1>Prissy Princess</h1>
     <p>Cybersecurity Student | Network Security | Cloud Computing</p>
-    <img src="profile.jpg" alt="My Photo">
+![image alt](https://github.com/jnealon1/prissy.github.io/blob/6a9efc03766fb152550e08e10fa38800af00e062/PPhoto.png)
 </header>
 
 <!-- ABOUT -->
