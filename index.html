@@ -1,5 +1,4 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -14,6 +13,7 @@ body {
     background-color: #f4f4f9;
     color: #333;
     display: flex;
+    transition: background-color 0.3s ease;
 }
 
 /* SIDEBAR */
@@ -33,6 +33,11 @@ body {
     width: 120px;
     border-radius: 50%;
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar img:hover {
+    transform: scale(1.05);
 }
 
 .sidebar h2 {
@@ -49,11 +54,13 @@ body {
     border-left: 4px solid transparent;
     margin-bottom: 5px;
     transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 .sidebar a:hover {
     background-color: #3e4160;
-    border-left: 4px solid #0077cc;
+    border-left: 4px solid #00aaff; /* accent color */
+    padding-left: 24px;
 }
 
 /* MAIN CONTENT */
@@ -65,6 +72,16 @@ body {
 
 section {
     margin-bottom: 60px;
+    padding: 20px 30px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 h1, h2 {
@@ -81,15 +98,20 @@ h2 {
     margin-bottom: 15px;
 }
 
-p {
+p, ul {
     font-size: 16px;
     line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+
+ul li {
+    margin-bottom: 5px;
 }
 
 /* BUTTON */
 button {
     padding: 10px 20px;
-    background-color: #0077cc;
+    background-color: #00aaff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -98,7 +120,7 @@ button {
 }
 
 button:hover {
-    background-color: #005fa3;
+    background-color: #0077cc;
 }
 
 /* RESPONSIVE */
@@ -169,7 +191,6 @@ button:hover {
         <p><b>Olive-Harvey College – Chicago, IL</b></p>
         <p>Pursuing Associate in Applied Science</p>
         <p>Expected Graduation: May 2026</p>
-        <br>
         <p><b>Western Illinois University – Macomb, IL</b></p>
         <p>Health Services Management</p>
         <p>Graduated: May 2013</p>
@@ -178,17 +199,38 @@ button:hover {
     <!-- EXPERIENCE -->
     <section id="experience">
         <h2>Experience</h2>
+
         <p><b>Correctional Officer – Cook County Sheriff's Department</b></p>
-        <p>• Managed daily security operations, conducted inspections, and ensured safety compliance.<br>
-           • Assisted in incident investigations and prepared detailed reports.</p>
-        <br>
+        <ul>
+            <li>Investigated welfare fraud cases using internal systems and databases to detect misuse of public assistance funds.</li>
+            <li>Applied analytical and investigative techniques to identify risks and prevent fraud.</li>
+            <li>Implemented security best practices to safeguard sensitive data and maintain secure systems.</li>
+            <li>Performed daily security checks, identified potential risks, and took proactive measures to maintain a secure environment in accordance with security protocols.</li>
+        </ul>
+
         <p><b>Human Services Caseworker – Illinois Department of Human Services</b></p>
-        <p>• Managed casework for clients, performed fraud detection, and ensured compliance with state regulations.<br>
-           • Provided guidance and support for employment and benefit programs.</p>
-        <br>
-        <p><b>TANF Caseworker & Social Service Career Trainee – Illinois DHS</b></p>
-        <p>• Assisted clients with applications and eligibility for various social services programs.<br>
-           • Conducted outreach, data management, and maintained accurate records.</p>
+        <ul>
+            <li>Investigated human services cases related to welfare fraud using internal databases and systems to detect misuse and protect program integrity.</li>
+            <li>Applied analytical and investigative techniques to identify risks, detect fraud, and mitigate threats to public assistance programs.</li>
+            <li>Conducted audits and investigations to verify eligibility and ensure compliance with program regulations.</li>
+            <li>Maintained organized records and documentation to support compliance requirements and regulatory audits.</li>
+        </ul>
+
+        <p><b>TANF Caseworker – Illinois Department of Human Services</b></p>
+        <ul>
+            <li>Managed sensitive client information while ensuring compliance with privacy laws and data protection requirements.</li>
+            <li>Monitored program eligibility systems and verified documentation to ensure regulatory compliance.</li>
+            <li>Collaborated with Public Health divisions and state agencies while managing sensitive client data and ensuring secure storage and compliance with privacy laws.</li>
+            <li>Managed caseload data and updated eligibility systems to maintain accurate records and ensure compliance with program regulations.</li>
+        </ul>
+
+        <p><b>Social Service Career Trainee – Illinois Department of Human Services</b></p>
+        <ul>
+            <li>Handled confidential financial, medical, and criminal history data while applying strict data protection and access control measures to safeguard sensitive information.</li>
+            <li>Analyzed case data and collaborated with cross-functional teams to ensure accuracy and compliance with regulatory requirements.</li>
+            <li>Identified potential risks during case reviews and supported mitigation strategies to maintain program integrity.</li>
+            <li>Collected and processed sensitive financial, medical, and personal data while following strict confidentiality and security standards.</li>
+        </ul>
     </section>
 
     <!-- CERTIFICATIONS -->
