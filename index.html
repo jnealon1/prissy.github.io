@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prissy Princess - Professional Profile</title>
+    <title>Prissy Princess - Cybersecurity Profile</title>
     <style>
-        /* Reset and center everything precisely */
         body {
             display: flex;
             flex-direction: column;
@@ -24,17 +23,21 @@
             letter-spacing: 1px;
         }
 
-        /* Profile photo styling */
         .profile-photo {
             width: 250px;
             height: 250px;
-            border-radius: 50%; /* perfectly round */
+            border-radius: 50%;
             object-fit: cover;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
             border: 4px solid #fff;
         }
 
-        /* Caption styling */
+        .profile-photo:hover {
+            box-shadow: 0 0 25px 7px #00aaff, 0 4px 15px rgba(0,0,0,0.3);
+            transform: scale(1.05);
+        }
+
         .caption {
             margin-top: 20px;
             font-size: 1.1em;
@@ -46,7 +49,7 @@
 </head>
 <body>
     <h1>Prissy Princess</h1>
-    <img src="PPhoto.png" alt="Prissy Profile Photo" class="profile-photo">
+    <img src="PPhoto.png" alt="" class="profile-photo">
     <div class="caption">
         Cybersecurity Student | Information Security | Risk & Threat Analysis
     </div>
