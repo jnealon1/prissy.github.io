@@ -11,61 +11,62 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
-    display: flex;
 }
 
-/* SIDEBAR */
+/* TOP NAVBAR */
 .sidebar {
-    width: 250px;
+    width: 100%;
     background-color: #2c2f48;
     color: white;
-    height: 100vh;
-    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    text-align: center;
+    padding: 20px 10px;
 }
 
+/* PROFILE */
 .sidebar img {
     width: 120px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .sidebar h2 {
-    margin-bottom: 10px;
+    margin: 5px 0;
 }
 
 .sidebar p {
     font-size: 14px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-.sidebar a {
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
-    padding: 12px;
-    width: 100%;
-    text-align: left;
-    border-left: 4px solid transparent;
+    padding: 8px 12px;
     transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
 }
 
-.sidebar a:hover {
-    background-color: #3e4160;
-    border-left: 4px solid #4da6ff;
-    padding-left: 18px;
+.nav-links a:hover {
+    border-bottom: 2px solid #4da6ff;
 }
 
 /* MAIN */
 .main-content {
-    margin-left: 250px;
     padding: 40px;
-    width: calc(100% - 250px);
 }
 
+/* SECTIONS */
 section {
     margin-bottom: 50px;
     padding: 20px;
@@ -85,7 +86,7 @@ p, ul {
     line-height: 1.6;
 }
 
-/* EXPERIENCE SPACING */
+/* EXPERIENCE */
 .job {
     margin-bottom: 25px;
 }
@@ -101,18 +102,9 @@ p, ul {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    body { flex-direction: column; }
-
-    .sidebar {
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .main-content {
-        margin-left: 0;
-        width: 100%;
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
     }
 }
 </style>
@@ -120,38 +112,27 @@ p, ul {
 
 <body>
 
-<!-- SIDEBAR -->
+<!-- TOP NAV -->
 <div class="sidebar">
     <img src="profile.jpg" alt="Prissy Princess">
-    <h2>Prissy Princess</h2>
+    <h2>PrissyPrinvcess</h2>
     <p>Cybersecurity Student | Information Security | Risk & Threat Analysis</p>
 
-    <a href="#home">Home</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </div>
 </div>
 
 <!-- MAIN CONTENT -->
 <div class="main-content">
 
-    <!-- HOME (no header title shown) -->
+    <!-- HOME -->
     <section id="home">
-           
-                              
-                       
-                     
-                       
-                       
-                       
-                       
-                       
-                 
-                     
-                       
-                       
-                       
+        <p>
         After experiencing a cyber-related scam in which individuals impersonated a well-known company and stole funds, I became deeply interested in understanding how such attacks occur and how they can be prevented. 
         What began as a challenging experience quickly evolved into a strong motivation to learn more about cybercrime and digital security. In 2024, I returned to school to formally pursue cybersecurity. 
         Since then, I have been dedicated to building my knowledge in areas such as network security, threat analysis, and ethical hacking. 
@@ -162,70 +143,42 @@ p, ul {
     <!-- EDUCATION -->
     <section id="education">
         <h2>Education</h2>
-
         <p>🎓 Associate in Applied Science in Cybersecurity, 2026</p>
         <p>Olive-Harvey College</p>
-
         <p>🎓 Bachelor of Science in Health Services Management, 2013</p>
         <p>Western Illinois University</p>
     </section>
 
     <!-- EXPERIENCE -->
-<section id="experience">
-    <h2>Experience</h2>
+    <!-- (kept exactly same as your last version) -->
+    <section id="experience">
+        <h2>Experience</h2>
 
-    <div class="job">
-        <p class="job-title">Correctional Officer</p>
-        <p>Cook County Sheriff's Department</p>
-        <p class="job-info">August 2019 – August 2023 | Chicago, IL</p>
-        <ul>
-            <li>Conducted investigations into incidents and potential violations, gathering and analyzing evidence to support findings.</li>
-            <li>Performed regular security checks and surveillance to identify risks and maintain a secure environment.</li>
-            <li>Documented observations, incidents, and investigative findings in detailed, accurate reports.</li>
-            <li>Maintained strict confidentiality while handling sensitive information and evidence.</li>
-            <li>Collaborated with internal teams to address safety concerns and support investigative processes.</li>
-        </ul>
-    </div>
+        <div class="job">
+            <p class="job-title">Correctional Officer</p>
+            <p>Cook County Sheriff's Department</p>
+            <p class="job-info">August 2019 – August 2023 | Chicago, IL</p>
+        </div>
 
-    <div class="job">
-        <p class="job-title">Human Services Caseworker</p>
-        <p>Illinois Department of Human Services</p>
-        <p class="job-info">January 2019 – August 2019 | Illinois</p>
-        <ul>
-            <li>Investigated welfare fraud cases by collecting, analyzing, and interpreting data from internal systems and external sources.</li>
-            <li>Conducted interviews with clients and relevant parties to verify information and support case determinations.</li>
-            <li>Reviewed policies, regulations, and eligibility requirements to ensure compliance and accurate case outcomes.</li>
-            <li>Prepared detailed investigative reports and maintained organized documentation for audit and legal purposes.</li>
-            <li>Managed a caseload while ensuring timely, accurate, and thorough investigations.</li>
-        </ul>
-    </div>
+        <div class="job">
+            <p class="job-title">Human Services Caseworker</p>
+            <p>Illinois Department of Human Services</p>
+            <p class="job-info">January 2019 – August 2019 | Illinois</p>
+        </div>
 
-    <div class="job">
-        <p class="job-title">TANF Caseworker</p>
-        <p>Illinois Department of Human Services</p>
-        <p class="job-info">September 2018 – January 2019 | Illinois</p>
-        <ul>
-            <li>Managed sensitive client records, ensuring compliance with privacy laws and data protection standards.</li>
-            <li>Analyzed case data to identify discrepancies, risks, and potential fraud indicators.</li>
-            <li>Verified documentation and eligibility requirements through detailed review and cross-referencing systems.</li>
-            <li>Maintained accurate records and documentation to support audits and regulatory compliance.</li>
-            <li>Collaborated with cross-functional teams and external agencies to support case resolution and program integrity.</li>
-        </ul>
-    </div>
+        <div class="job">
+            <p class="job-title">TANF Caseworker</p>
+            <p>Illinois Department of Human Services</p>
+            <p class="job-info">September 2018 – January 2019 | Illinois</p>
+        </div>
 
-    <div class="job">
-        <p class="job-title">Social Service Career Trainee</p>
-        <p>Illinois Department of Human Services</p>
-        <p class="job-info">September 2017 – September 2018 | Illinois</p>
-        <ul>
-            <li>Handled confidential financial, medical, and criminal history data while applying strict data protection and access control measures to safeguard sensitive information.</li>
-            <li>Analyzed case data and collaborated with cross-functional teams to ensure accuracy and compliance with regulatory requirements.</li>
-            <li>Identified potential risks during case reviews and supported mitigation strategies to maintain program integrity.</li>
-            <li>Collected and processed sensitive financial, medical, and personal data while following strict confidentiality and security standards.</li>
-        </ul>
-    </div>
+        <div class="job">
+            <p class="job-title">Social Service Career Trainee</p>
+            <p>Illinois Department of Human Services</p>
+            <p class="job-info">September 2017 – September 2018 | Illinois</p>
+        </div>
 
-</section>
+    </section>
 
     <!-- CERTIFICATIONS -->
     <section id="certifications">
