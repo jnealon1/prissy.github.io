@@ -1,54 +1,257 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prissy Princess - Professional Profile</title>
-    <style>
-        /* Center everything vertically and horizontally */
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prissy Princess | Cybersecurity Portfolio</title>
 
-        h1 {
-            margin-bottom: 30px;
-            color: #333;
-            letter-spacing: 1px;
-        }
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-        /* Profile photo styling */
-        .profile-photo {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%; /* perfectly round */
-            object-fit: cover; /* crop image to circle */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* subtle shadow */
-            border: 4px solid #fff;
-        }
+<style>
+/* GENERAL STYLES */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+}
 
-        /* Caption styling */
-        .caption {
-            margin-top: 20px;
-            font-size: 1.1em;
-            color: #555;
-            max-width: 400px; /* wraps nicely under photo */
-            line-height: 1.5;
-        }
-    </style>
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #2c2f48;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* SIDEBAR PROFILE PHOTO */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border: 3px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+    box-shadow: 0 0 30px 8px #00aaff, 0 4px 15px rgba(0,0,0,0.3);
+    transform: scale(1.05);
+}
+
+.sidebar h2 {
+    margin: 10px 0 5px 0;
+    color: white;
+}
+
+.sidebar p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #b0b3c6;
+    line-height: 1.4;
+}
+
+/* ICON LINKS */
+.sidebar .icon-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.sidebar a.icon-link {
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.sidebar a.icon-link:hover {
+    color: #4da6ff;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    margin-left: 240px;
+    padding: 40px;
+    flex: 1;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nav-links a {
+    color: #2c2f48;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #4da6ff;
+}
+
+/* SECTIONS */
+section {
+    margin-bottom: 50px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    border-left: 6px solid #4da6ff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+p, ul {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.job {
+    margin-bottom: 25px;
+}
+
+.job-title {
+    font-weight: bold;
+}
+
+.job-info {
+    font-size: 14px;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+    .sidebar img {
+        width: 80px;
+        height: 80px;
+    }
+    .sidebar h2, .sidebar p {
+        display: none;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>Prissy Princess</h1>
-    <img src="PPhoto.png" alt="Prissy Profile Photo" class="profile-photo">
-    <div class="caption">
-        Cybersecurity Student | Information Security | Risk & Threat Analysis
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <img src="PPhoto.png" alt="My Photo" class="profile-photo">
+
+    <h2>Prissy Princess</h2>
+
+    <p>Cybersecurity Student | Information Security | Risk & Threat Analysis</p>
+
+    <div class="icon-links">
+        <a href="https://github.com/YourGitHubUsername" target="_blank" class="icon-link">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:youremail@example.com" class="icon-link">
+            <i class="fas fa-envelope"></i>
+        </a>
     </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+<div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<section id="home">
+    <p>
+    After experiencing a cyber-related scam in which individuals impersonated a well-known company and stole funds...
+    </p>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <p>🎓 Associate in Applied Science in Cybersecurity, 2026</p>
+    <p>Olive-Harvey College</p>
+    <p>🎓 Bachelor of Science in Health Services Management, 2013</p>
+    <p>Western Illinois University</p>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+
+<div class="job">
+    <p class="job-title">Correctional Officer</p>
+    <p>Cook County Sheriff's Department</p>
+    <p class="job-info">August 2019 – Present | Chicago, IL</p>
+    <ul>
+        <li>Conduct investigations into incidents and potential violations, gathering and analyzing evidence to support findings.</li>
+        <li>Perform regular security checks and surveillance to identify risks and maintain a secure environment.</li>
+        <li>Document observations, incidents, and investigative findings in detailed, accurate reports.</li>
+        <li>Maintain strict confidentiality while handling sensitive information and evidence.</li>
+        <li>Collaborate with internal teams to address safety concerns and support investigative processes.</li>
+    </ul>
+</div>
+
+</section>
+
+<section id="certifications">
+<h2>Certifications</h2>
+<ul style="list-style:none; padding:0;">
+    <li>City Colleges of Chicago Cybersecurity Studies</li>
+    <li>Google Cybersecurity Certification</li>
+    <li>Amazon AWS Cloud Certification</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a><br>
+GitHub: <a href="https://github.com/YourGitHubUsername" target="_blank">github.com/yourusername</a></p>
+</section>
+
+</div>
+
+<footer>
+<p>© 2026 Prissy Princess | Cybersecurity Portfolio</p>
+</footer>
+
 </body>
 </html>
+     
