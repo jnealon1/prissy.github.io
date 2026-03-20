@@ -1,124 +1,152 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
     <meta charset="UTF-8">
-    <title>Prissy | Cybersecurity Portfolio</title>
+    <title>Prissy's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c8bed7;
+            text-align: center;
+        }
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background-color: #c8bed7;
-        text-align: center; 
-    }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
 
-    /* NAVBAR */
-    nav {
-        background-color: #222;
-        padding: 15px;
-    }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #0077cc;
+            font-weight: bold;
+        }
 
-    nav a {
-        color: white;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-    }
+        nav a:hover {
+            color: #000;
+        }
 
-    nav a:hover {
-        text-decoration: underline;
-    }
+        main {
+            padding: 40px;
+        }
 
-    /* HEADER */
-    header {
-        background-color: #333;
-        color: white;
-        padding: 40px 20px;
-    }
+        button {
+            padding: 10px 20px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-    /* PROFILE IMAGE */
-    img {
-        width: 150px;
-        border-radius: 50%;
-        margin-top: 20px;
-    }
+        button:hover {
+            background-color: #005fa3;
+        }
 
-    /* SECTIONS */
-    section {
-        padding: 40px;
-    }
+        section {
+            padding: 40px 20px;
+        }
 
-    h2 {
-        color: #333;
-    }
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
 
-    /* BUTTON */
-    button {
-        padding: 10px 20px;
-        background-color: #0077cc;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+        img {
+            max-width: 200px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
 
-    button:hover {
-        background-color: #005fa3;
-    }
-
-    /* FOOTER */
-    footer {
-        background-color: #333;
-        color: white;
-        padding: 20px;
-    }
-</style> 
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#resume">Resume</a>
-</nav>
+    <header>
+        <h1>Welcome to My Portfolio!</h1>
+    </header>
 
-<!-- HEADER -->
-<header> 
-    <h1>Prissy Princess</h1>
-    <p>Cybersecurity Student | Network Security | Cloud Computing</p>
-    <img src="profile.jpg" alt="My Photo">
-</header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#tools">Tools</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<!-- ABOUT -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a cybersecurity student graduating May 2026 with experience in social services 
-        and law enforcement. I am passionate about network security, cloud computing, and ethical hacking.
-    </p>
-</section>
+    <main>
+        <h2>Prissy</h2>
+        <p>Cybersecurity Student | Tech Enthusiast | Future Ethical Hacker</p>
+    </main>
 
-<!-- SKILLS -->
-<section id="skills">
-    <h2>Technical Skills</h2>
-    <p>Linux | Networking | Wireshark | Scapy | Cloud Basics | Security Fundamentals</p>
-</section>
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="profile.jpg" alt="My Photo">
+        <p>
+            Hi, I’m Prissy. After experiencing a cyber-related scam in which individuals impersonated a well-known company and stole funds, I became deeply interested in understanding how such attacks occur and how they can be prevented. What began as a challenging experience quickly evolved into a strong motivation to learn more about cybercrime and digital security.
+        </p>
+        <p>
+            In 2024, I made the decision to return to school to formally pursue cybersecurity. Since then, I have been dedicated to building my knowledge in areas such as network security, threat analysis, and ethical hacking. I enjoy learning about Linux, Python, and cloud infrastructure while continuing to build and strengthen technical skills. I am committed to applying my skills and experience to enhance digital security and support individuals and organizations in protecting against evolving cyber threats.
+        </p>
+        <a href="resume.pdf" download>
+            <button>Download My Resume</button>
+        </a>
+        <h3>Scan to Download My Resume</h3>
+        <img src="qr-code.png" alt="QR Code for Resume">
+    </section>
 
-<!-- RESUME -->
-<section id="resume">
-    <h2>My Resume</h2>
-    <a href="resume.pdf" download>
-        <button>Download My Resume</button>
-    </a>
-</section>
+    <section id="education">
+        <h2>Education</h2>
+        <p><b>Olive-Harvey College – Chicago, IL</b></p>
+        <p>Pursuing Associate in Applied Science</p>
+        <p>Expected Graduation: May 2026</p>
 
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Prissy Princess | Cybersecurity Portfolio</p>
-</footer>
+        <br>
+
+        <p><b>Western Illinois University – Macomb, IL</b></p>
+        <p>Health Services Management</p>
+        <p>Graduated: May 2013</p>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Cybersecurity Studies</li>
+            <li>Google Cybersecurity Certification</li>
+            <li>AWS Cloud Certification</li>
+        </ul>
+    </section>
+
+    <section id="tools">
+        <h2>Tools & Skills</h2>
+        <ul>
+            <li>Linux</li>
+            <li>Python</li>
+            <li>Network Security</li>
+            <li>Cloud Infrastructure (AWS)</li>
+            <li>Ethical Hacking</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: your.email@example.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Prissy | All rights reserved</p>
+    </footer>
 
 </body>
 </html>
