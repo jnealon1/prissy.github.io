@@ -1,0 +1,306 @@
+*****Keep and DO NOT DELETE!!!!!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prissy Princess | Cybersecurity Portfolio</title>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+/* GENERAL STYLES */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #2c2f48;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* SIDEBAR PROFILE PHOTO */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border: 3px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+    box-shadow: 0 0 30px 8px #00aaff, 0 4px 15px rgba(0,0,0,0.3);
+    transform: scale(1.05);
+}
+
+.sidebar h2 {
+    margin: 10px 0 5px 0;
+    color: white;
+}
+
+.sidebar p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #b0b3c6;
+    line-height: 1.4;
+}
+
+/* ICON LINKS */
+.sidebar .icon-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.sidebar a.icon-link {
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.sidebar a.icon-link:hover {
+    color: #4da6ff;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    margin-left: 240px;
+    padding: 40px;
+    flex: 1;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nav-links a {
+    color: #2c2f48;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #4da6ff;
+}
+
+/* SECTIONS */
+section {
+    margin-bottom: 50px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    border-left: 6px solid #4da6ff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+p, ul {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.job {
+    margin-bottom: 25px;
+}
+
+.job-title {
+    font-weight: bold;
+}
+
+.job-info {
+    font-size: 14px;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+    .sidebar img {
+        width: 80px;
+        height: 80px;
+    }
+    .sidebar h2, .sidebar p {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <!-- PROFILE PHOTO -->
+    <img src="Images/PPhoto.png" alt="Prissy Princess" class="profile-photo">
+
+    <!-- NAME -->
+    <h2>Prissy Princess</h2>
+
+    <!-- PROFESSIONAL TITLE / CAPTION -->
+    <p>Cybersecurity Student | Information Security | Risk & Threat Analysis</p>
+
+    <!-- SOCIAL ICONS -->
+    <div class="icon-links">
+        <a href="https://github.com/YourGitHubUsername" target="_blank" class="icon-link">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:youremail@example.com" class="icon-link">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+    <!-- NAV LINKS -->
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- HOME -->
+    <section id="home">
+        <p>
+        After experiencing a cyber-related scam in which individuals impersonated a well-known company and stole funds, I became deeply interested in understanding how such attacks occur and how they can be prevented. 
+        What began as a challenging experience quickly evolved into a strong motivation to learn more about cybercrime and digital security. In 2024, I returned to school to formally pursue cybersecurity. 
+        Since then, I have been dedicated to building my knowledge in areas such as network security, threat analysis, and ethical hacking. 
+        I enjoy learning Linux, Python, and cloud infrastructure while continuing to build technical skills. I am committed to applying my skills and experience to enhance digital security and support individuals and organizations in protecting against evolving cyber threats.
+        </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <h2>Education</h2>
+        <p>🎓 Associate in Applied Science in Cybersecurity, 2026</p>
+        <p>Olive-Harvey College</p>
+        <p>🎓 Bachelor of Science in Health Services Management, 2013</p>
+        <p>Western Illinois University</p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="job">
+            <p class="job-title">Correctional Officer</p>
+            <p>Cook County Sheriff's Department</p>
+            <p class="job-info">August 2019 – Present | Chicago, IL</p>
+            <ul>
+               Conduct investigations into incidents and potential violations, gathering and analyzing evidence to support findings.
+               Perform regular security checks and surveillance to identify risks and maintain a secure environment.
+               Document observations, incidents, and investigative findings in detailed, accurate reports.
+               Maintain strict confidentiality while handling sensitive information and evidence.
+               Collaborate with internal teams to address safety concerns and support investigative processes.
+            </ul>
+        </div>
+
+        <div class="job">
+            <p class="job-title">Human Services Caseworker</p>
+            <p>Illinois Department of Human Services</p>
+            <p class="job-info">January 2019 – August 2019 | Chicago, Illinois</p>
+            <ul>
+                <li>Investigated human services cases related to welfare fraud using internal databases and systems to detect misuse and protect program integrity.</li>
+                <li>Applied analytical and investigative techniques to identify risks, detect fraud, and mitigate threats to public assistance programs.</li>
+                <li>Conducted audits and investigations to verify eligibility and ensure compliance with program regulations.</li>
+                <li>Maintained organized records and documentation to support compliance requirements and regulatory audits.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <p class="job-title">TANF Caseworker</p>
+            <p>Illinois Department of Human Services</p>
+            <p class="job-info">September 2018 – January 2019 | Chicago, Illinois</p>
+            <ul>
+                <li>Managed sensitive client information while ensuring compliance with privacy laws and data protection requirements.</li>
+                <li>Monitored program eligibility systems and verified documentation to ensure regulatory compliance.</li>
+                <li>Collaborated with Public Health divisions and state agencies while managing sensitive client data and ensuring secure storage and compliance with privacy laws.</li>
+                <li>Managed caseload data and updated eligibility systems to maintain accurate records and ensure compliance with program regulations.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <p class="job-title">Social Service Career Trainee</p>
+            <p>Illinois Department of Human Services</p>
+            <p class="job-info">September 2017 – September 2018 | Chicago, Illinois</p>
+            <ul>
+                <li>Handled confidential financial, medical, and criminal history data while applying strict data protection and access control measures to safeguard sensitive information.</li>
+                <li>Analyzed case data and collaborated with cross-functional teams to ensure accuracy and compliance with regulatory requirements.</li>
+                <li>Identified potential risks during case reviews and supported mitigation strategies to maintain program integrity.</li>
+                <li>Collected and processed sensitive financial, medical, and personal data while following strict confidentiality and security standards.</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul style="list-style:none; padding:0;">
+            <li>City Colleges of Chicago Cybersecurity Studies</li>
+            <li>Google Cybersecurity Certification</li>
+            <li>Amazon AWS Cloud Certification</li>
+        </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a><br>
+        GitHub: <a href="https://github.com/YourGitHubUsername" target="_blank">github.com/yourusername</a></p>
+    </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Prissy Princess | Cybersecurity Portfolio</p>
+</footer>
+
+</body>
+</html>
