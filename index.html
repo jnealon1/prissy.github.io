@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prissy Princess | Cybersecurity Portfolio</title>
 
-<!-- Font Awesome for icons -->
+<!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <style>
-/* GENERAL STYLES */
+/* GENERAL */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -31,7 +31,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* added */
+    justify-content: flex-start;
     padding: 20px;
     text-align: center;
 }
@@ -48,7 +48,7 @@ body {
 }
 
 .profile-photo:hover {
-    box-shadow: 0 0 30px 8px #00aaff, 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 0 30px 8px #00aaff;
     transform: scale(1.05);
 }
 
@@ -66,7 +66,7 @@ body {
 .icon-links {
     display: flex;
     gap: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .icon-link {
@@ -79,28 +79,23 @@ body {
     color: #4da6ff;
 }
 
-/* RESUME BUTTON */
-.resume-btn {
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #4da6ff;
-    color: white;
+/* MINIMAL RESUME LINK */
+.resume-link {
+    margin-top: 5px;
+    color: #b0b3c6;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    text-align: center;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
     transition: all 0.3s ease;
 }
 
-.resume-btn:hover {
-    background-color: #007acc;
-    transform: scale(1.05);
-}
-
-.resume-btn i {
-    margin-right: 8px;
+.resume-link:hover {
+    color: #4da6ff;
+    border-bottom: 2px solid #4da6ff;
 }
 
 /* MAIN CONTENT */
@@ -110,7 +105,7 @@ body {
     flex: 1;
 }
 
-/* NAV LINKS */
+/* NAV */
 .nav-links {
     display: flex;
     gap: 20px;
@@ -189,18 +184,13 @@ section {
         </a>
     </div>
 
-    <!-- DOWNLOAD RESUME BUTTON -->
-    <a href="resume.pdf" download class="resume-btn">
-        <i class="fas fa-download"></i> Download Resume
-    </a>
-
-    <!-- OPTIONAL VIEW BUTTON -->
-    <a href="resume.pdf" target="_blank" class="resume-btn" style="background:#444;">
-        <i class="fas fa-eye"></i> View Resume
+    <!-- CLEAN RESUME LINK -->
+    <a href="resume.pdf" download class="resume-link">
+        <i class="fas fa-download"></i> Resume
     </a>
 </div>
 
-<!-- MAIN CONTENT -->
+<!-- MAIN -->
 <div class="main-content">
 
     <div class="nav-links">
