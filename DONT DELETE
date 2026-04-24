@@ -304,3 +304,375 @@ p, ul {
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jacquetta A. Nealon | Cybersecurity Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f6f7fb;
+    display: flex;
+    color: #2b2b2b;
+    line-height: 1.6;
+}
+
+/* =========================
+   MODERN THIN SIDEBAR
+========================= */
+.sidebar {
+    width: 190px;
+    position: fixed;
+    height: 100vh;
+    background: linear-gradient(180deg, #1f2235, #2c2f48);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 12px;
+    text-align: center;
+    box-shadow: 4px 0 18px rgba(0,0,0,0.15);
+}
+
+.profile-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff30;
+    margin-bottom: 10px;
+}
+
+.sidebar h2 {
+    font-size: 15px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+/* Focus Area Section */
+.sidebar-section h2 {
+    font-size: 13px;
+    margin-top: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ffffff40;
+    width: 100%;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #cfd3ea;
+    line-height: 1.5;
+}
+
+/* ICONS */
+.icon-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.icon-link {
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.icon-link:hover {
+    color: #4da6ff;
+    transform: scale(1.1);
+}
+
+/* RESUME */
+.resume-link {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #cfd3ea;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.resume-link:hover {
+    color: #4da6ff;
+    border-bottom: 1px solid #4da6ff;
+}
+
+/* =========================
+   MAIN CONTENT (RECRUITER FRIENDLY)
+========================= */
+.main-content {
+    margin-left: 210px;
+    padding: 35px;
+    max-width: 1000px;
+}
+
+/* NAV */
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c2f48;
+    font-weight: 500;
+    font-size: 14px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #4da6ff;
+}
+
+/* SECTIONS */
+section {
+    background: #fff;
+    padding: 22px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border-left: 4px solid #4da6ff;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1f2235;
+}
+
+/* ABOUT TEXT IMPROVED READABILITY */
+section p {
+    font-size: 14px;
+    color: #444;
+}
+
+/* EXPERIENCE */
+.job {
+    margin-bottom: 18px;
+}
+
+.job-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: #1f2235;
+}
+
+.job-company {
+    font-style: italic;
+    color: #555;
+    font-size: 13px;
+}
+
+.job-info {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 6px;
+}
+
+.job ul {
+    padding-left: 18px;
+    font-size: 13px;
+    color: #444;
+}
+
+/* CREDENTIALS */
+.cert-list {
+    list-style: none;
+}
+
+.cert-list li {
+    margin-bottom: 8px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cert-list i {
+    color: #4da6ff;
+}
+
+/* CONTACT */
+#contact i {
+    margin-right: 8px;
+    color: #4da6ff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <img src="PPhoto.png" class="profile-photo">
+
+    <h2>Jacquetta A. Nealon</h2>
+
+    <div class="sidebar-section">
+        <h2>Focus Areas</h2>
+        <ul>
+            <li>Cybersecurity Fundamentals</li>
+            <li>Threat Detection & Monitoring</li>
+            <li>System Security & Risk Awareness</li>
+            <li>Cloud & Infrastructure Concepts</li>
+        </ul>
+    </div>
+
+    <div class="icon-links">
+        <a href="https://github.com/jnealon1" class="icon-link">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:jnealon1@gmail.com" class="icon-link">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <a href="resume26.pdf" download class="resume-link">
+        ⬇ Download Resume
+    </a>
+</div>
+
+<!-- MAIN -->
+<div class="main-content">
+
+<div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<section id="about">
+<h2>About Me</h2>
+<p>
+I transitioned into cybersecurity after experiencing a real-world cyber scam that exposed how easily attackers can exploit trust and systems. That experience shifted my focus toward understanding how cyber threats are detected, investigated, and prevented. I have a background in correctional and human services roles, where I developed strong skills in risk assessment, documentation, and operating in structured, security-focused environments. Today, I’m building technical skills in network security, Linux, Python, and cloud fundamentals, with a focus on security operations and threat detection. I’m especially interested in SOC environments, where monitoring and analysis help stop threats before they escalate. My goal is to contribute to cybersecurity teams by strengthening system defenses and turning threat awareness into actionable protection.
+</p>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<p>🎓 Associate in Applied Science in Cybersecurity, 2026</p>
+<p>Olive-Harvey College</p>
+<p>🎓 Bachelor of Science in Health Services Management, 2013</p>
+<p>Western Illinois University</p>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+
+<div class="job">
+<p class="job-title">Correctional Officer</p>
+<p class="job-company">Cook County Sheriff's Department</p>
+<p class="job-info">August 2019 – Present | Chicago, IL</p>
+<ul>
+<li>Investigate incidents and policy violations in a high-security environment.</li>
+<li>Maintain situational awareness and respond to security events.</li>
+<li>Document findings in detailed reports for compliance and audits.</li>
+</ul>
+</div>
+
+<div class="job">
+<p class="job-title">Human Services Caseworker</p>
+<p class="job-company">Illinois Department of Human Services</p>
+<p class="job-info">January 2019 – August 2019</p>
+<ul>
+<li>Analyzed case data and verified accuracy across systems.</li>
+<li>Conducted interviews to validate information.</li>
+<li>Ensured compliance with regulations and policies.</li>
+</ul>
+</div>
+
+<div class="job">
+<p class="job-title">TANF Caseworker</p>
+<p class="job-company">Illinois Department of Human Services</p>
+<p class="job-info">September 2018 – January 2019</p>
+<ul>
+<li>Reviewed cases for accuracy and compliance.</li>
+<li>Resolved discrepancies through investigation.</li>
+</ul>
+</div>
+
+<div class="job">
+<p class="job-title">Social Service Career Trainee</p>
+<p class="job-company">Illinois Department of Human Services</p>
+<p class="job-info">September 2017 – September 2018</p>
+<ul>
+<li>Handled sensitive data with strict confidentiality controls.</li>
+<li>Supported case accuracy and risk identification.</li>
+</ul>
+</div>
+
+</section>
+
+<section id="credentials">
+<h2>Credentials</h2>
+<ul class="cert-list">
+<li><i class="fas fa-shield-halved"></i> Advanced Cybersecurity Certification</li>
+<li><i class="fas fa-user-lock"></i> Google Cybersecurity Certification</li>
+<li><i class="fas fa-cloud"></i> AWS Cloud Certification</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p><i class="fas fa-envelope"></i> rubyrose1@gmail.com</p>
+<p><i class="fab fa-github"></i> github.com/rubyrose1</p>
+</section>
+
+</div>
+
+</body>
+</html>
