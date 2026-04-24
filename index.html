@@ -22,9 +22,7 @@ body {
     line-height: 1.6;
 }
 
-/* =========================
-   SIDEBAR
-========================= */
+/* SIDEBAR */
 .sidebar {
     width: 230px;
     position: fixed;
@@ -38,24 +36,26 @@ body {
     text-align: center;
 }
 
-/* 🔥 BIGGER PROFESSIONAL PHOTO */
+/* PROFILE PHOTO */
 .profile-photo {
     width: 190px;
     height: 190px;
     border-radius: 50%;
-    object-fit: center top;
+    object-fit: cover;
+    object-position: center top; /* FIXED */
     border: 3px solid white;
     margin-bottom: 12px;
-    transition: all 0.3s ease; 
-
-.profile-photo:hover {
-    transform: scale(1.06);
-    box-shadow: 0 10px 30px rgba(77,166,255,0.4);
-    border-color: #4da6ff;
-   
+    transition: all 0.3s ease;
 }
 
-/* 🔥 NAME + TEXT PURE WHITE */
+/* HOVER EFFECT */
+.profile-photo:hover {
+    transform: scale(1.06) translateY(-3px);
+    box-shadow: 0 10px 30px rgba(77,166,255,0.4);
+    border-color: #4da6ff;
+}
+
+/* SIDEBAR TEXT */
 .sidebar h2 {
     font-size: 18px;
     margin-bottom: 8px;
@@ -76,7 +76,7 @@ body {
     font-size: 13px;
     margin-top: 10px;
     line-height: 1.5;
-    color: #ffffff; /* 🔥 focus areas now white */
+    color: #ffffff;
 }
 
 /* ICONS */
@@ -107,34 +107,15 @@ body {
     color: #4da6ff;
 }
 
-/* =========================
-   MAIN CONTENT
-========================= */
+/* MAIN CONTENT */
 .main-content {
     margin-left: 250px;
     padding: 40px;
+    padding-bottom: 80px; /* prevents footer overlap */
     max-width: 1100px;
-    
-footer 
-    background: #2c2f48;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-center:230px
-    
-    position: fixed;
-    bottom: 0;
-    left: 230px;   /* matches sidebar width */
-    width: calc(100% - 230px); /* prevents overlap with sidebar */
 }
 
-
-    
-}
-
-/* =========================
-   TOP NAV (DARK BLUE NOW)
-========================= */
+/* TOP NAV */
 .nav-links {
     display: flex;
     justify-content: center;
@@ -142,17 +123,15 @@ footer
     gap: 30px;
     margin-bottom: 35px;
     padding: 18px 0;
-    background: #2c2f48; /* 🔥 DARK BLUE MATCHING SIDEBAR */
+    background: #2c2f48;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #ffffff; /* white text for contrast */
+    color: #ffffff;
     font-size: 16px;
     font-weight: 600;
-    padding-bottom: 4px;
     border-bottom: 2px solid transparent;
 }
 
@@ -160,9 +139,7 @@ footer
     border-bottom: 2px solid #4da6ff;
 }
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 section {
     background: white;
     padding: 24px;
@@ -175,12 +152,10 @@ section {
 h2 {
     font-size: 20px;
     margin-bottom: 12px;
-    color: #1f2235;
 }
 
 section p {
     font-size: 15px;
-    color: #444;
 }
 
 /* EXPERIENCE */
@@ -190,24 +165,20 @@ section p {
 
 .job-title {
     font-weight: 700;
-    font-size: 15px;
 }
 
 .job-company {
     font-style: italic;
-    color: #555;
     font-size: 13px;
 }
 
 .job-info {
     font-size: 13px;
-    color: #777;
     margin-bottom: 6px;
 }
 
 .job ul {
     padding-left: 18px;
-    font-size: 14px;
 }
 
 /* CERTS */
@@ -217,9 +188,7 @@ section p {
 
 .cert-list li {
     display: flex;
-    align-items: center;
     gap: 10px;
-    font-size: 14px;
     margin-bottom: 8px;
 }
 
@@ -231,6 +200,18 @@ section p {
 #contact i {
     color: #4da6ff;
     margin-right: 8px;
+}
+
+/* FOOTER (FIXED POSITION) */
+footer {
+    background: #2c2f48;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 230px;
+    width: calc(100% - 230px);
 }
 
 /* MOBILE */
@@ -248,6 +229,11 @@ section p {
     .main-content {
         margin-left: 0;
         padding: 20px;
+    }
+
+    footer {
+        left: 0;
+        width: 100%;
     }
 }
 </style>
@@ -272,17 +258,11 @@ section p {
     </div>
 
     <div class="icon-links">
-        <a href="https://github.com/jnealon1" class="icon-link">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:jnealon1@gmail.com" class="icon-link">
-            <i class="fas fa-envelope"></i>
-        </a>
+        <a href="https://github.com/jnealon1" class="icon-link"><i class="fab fa-github"></i></a>
+        <a href="mailto:jnealon1@gmail.com" class="icon-link"><i class="fas fa-envelope"></i></a>
     </div>
 
-    <a href="resume26.pdf" download class="resume-link">
-        ⬇ Download Resume
-    </a>
+    <a href="resume26.pdf" download class="resume-link">⬇ Download Resume</a>
 </div>
 
 <!-- MAIN -->
@@ -299,7 +279,7 @@ section p {
 <section id="about">
 <h2>About Me</h2>
 <p>
-I transitioned into cybersecurity after experiencing a real-world cyber scam that exposed how easily attackers can exploit trust and systems. That experience shifted my focus toward understanding how cyber threats are detected, investigated, and prevented. I have a background in correctional and human services roles, where I developed strong skills in risk assessment, documentation, and operating in structured, security-focused environments. Today, I’m building technical skills in network security, Linux, Python, and cloud fundamentals, with a focus on security operations and threat detection. I’m especially interested in SOC environments, where monitoring and analysis help stop threats before they escalate. My goal is to contribute to cybersecurity teams by strengthening system defenses and turning threat awareness into actionable protection.
+I transitioned into cybersecurity after experiencing a real-world cyber scam that exposed how easily attackers can exploit trust and systems...
 </p>
 </section>
 
@@ -344,10 +324,6 @@ I transitioned into cybersecurity after experiencing a real-world cyber scam tha
 
 </div>
 
-</body>
-</html>
-
-
 <!-- FOOTER -->
 <footer>
     <p>© 2026 Prissy Princess | Cybersecurity Portfolio</p>
@@ -355,5 +331,4 @@ I transitioned into cybersecurity after experiencing a real-world cyber scam tha
 
 </body>
 </html>
-
 
