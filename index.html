@@ -8,6 +8,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+:root {
+    --bg: #0b0f1a;
+    --card: rgba(255,255,255,0.06);
+    --text: #e6e6e6;
+    --muted: #a9b0c3;
+    --accent: #4da6ff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,60 +24,56 @@
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    background: #f6f7fb;
+    background: radial-gradient(circle at top, #141a2e, var(--bg));
+    color: var(--text);
     display: flex;
-    color: #2b2b2b;
-    line-height: 1.6;
 }
 
 /* =========================
-   MODERN THIN SIDEBAR
+   GLASSMORPHIC SIDEBAR
 ========================= */
 .sidebar {
-    width: 190px;
-    position: fixed;
+    width: 210px;
     height: 100vh;
-    background: linear-gradient(180deg, #1f2235, #2c2f48);
-    color: white;
+    position: fixed;
+    padding: 18px 14px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255,255,255,0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 18px 12px;
     text-align: center;
-    box-shadow: 4px 0 18px rgba(0,0,0,0.15);
 }
 
 .profile-photo {
-    width: 110px;
-    height: 110px;
+    width: 105px;
+    height: 105px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #ffffff30;
+    border: 2px solid rgba(255,255,255,0.2);
     margin-bottom: 10px;
+    object-fit: cover;
 }
 
 .sidebar h2 {
     font-size: 15px;
-    margin-bottom: 6px;
-    font-weight: 600;
+    margin-bottom: 8px;
 }
 
-/* Focus Area Section */
 .sidebar-section h2 {
-    font-size: 13px;
-    margin-top: 12px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid #ffffff40;
-    width: 100%;
-    letter-spacing: 0.5px;
+    font-size: 12px;
+    letter-spacing: 1px;
     text-transform: uppercase;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 6px;
+    margin-top: 12px;
 }
 
 .sidebar-section ul {
     list-style: none;
-    margin-top: 10px;
     font-size: 12px;
-    color: #cfd3ea;
+    color: var(--muted);
+    margin-top: 10px;
     line-height: 1.5;
 }
 
@@ -81,82 +85,85 @@ body {
 }
 
 .icon-link {
-    color: white;
+    color: var(--text);
     font-size: 16px;
     transition: 0.3s;
 }
 
 .icon-link:hover {
-    color: #4da6ff;
-    transform: scale(1.1);
+    color: var(--accent);
+    transform: translateY(-2px);
 }
 
 /* RESUME */
 .resume-link {
     margin-top: 12px;
     font-size: 12px;
-    color: #cfd3ea;
+    color: var(--muted);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: 0.3s;
 }
 
 .resume-link:hover {
-    color: #4da6ff;
-    border-bottom: 1px solid #4da6ff;
+    color: var(--accent);
 }
 
 /* =========================
-   MAIN CONTENT (RECRUITER FRIENDLY)
+   MAIN AREA
 ========================= */
 .main-content {
-    margin-left: 210px;
-    padding: 35px;
-    max-width: 1000px;
+    margin-left: 230px;
+    padding: 40px;
+    max-width: 1050px;
 }
 
 /* NAV */
 .nav-links {
     display: flex;
-    flex-wrap: wrap;
     gap: 18px;
-    justify-content: center;
-    margin-bottom: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .nav-links a {
+    color: var(--muted);
     text-decoration: none;
-    color: #2c2f48;
-    font-weight: 500;
-    font-size: 14px;
-    padding-bottom: 4px;
+    font-size: 13px;
+    padding-bottom: 3px;
     border-bottom: 2px solid transparent;
 }
 
 .nav-links a:hover {
-    border-bottom: 2px solid #4da6ff;
+    color: var(--text);
+    border-bottom: 2px solid var(--accent);
+}
+
+/* HERO STYLE ABOUT */
+#about {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 20px;
+}
+
+#about h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 /* SECTIONS */
 section {
-    background: #fff;
+    background: var(--card);
     padding: 22px;
+    border-radius: 14px;
     margin-bottom: 18px;
-    border-radius: 10px;
-    border-left: 4px solid #4da6ff;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
 h2 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #1f2235;
-}
-
-/* ABOUT TEXT IMPROVED READABILITY */
-section p {
-    font-size: 14px;
-    color: #444;
+    color: var(--text);
 }
 
 /* EXPERIENCE */
@@ -165,64 +172,59 @@ section p {
 }
 
 .job-title {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 15px;
-    color: #1f2235;
 }
 
 .job-company {
     font-style: italic;
-    color: #555;
+    color: var(--muted);
     font-size: 13px;
 }
 
 .job-info {
     font-size: 12px;
-    color: #777;
+    color: var(--muted);
     margin-bottom: 6px;
 }
 
 .job ul {
     padding-left: 18px;
     font-size: 13px;
-    color: #444;
+    color: var(--text);
 }
 
-/* CREDENTIALS */
+/* CERTS */
 .cert-list {
     list-style: none;
 }
 
 .cert-list li {
-    margin-bottom: 8px;
-    font-size: 13px;
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 13px;
+    margin-bottom: 8px;
 }
 
 .cert-list i {
-    color: #4da6ff;
+    color: var(--accent);
 }
 
 /* CONTACT */
 #contact i {
+    color: var(--accent);
     margin-right: 8px;
-    color: #4da6ff;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
-
+    body { flex-direction: column; }
     .sidebar {
         width: 100%;
         height: auto;
         position: relative;
     }
-
     .main-content {
         margin-left: 0;
         padding: 20px;
@@ -250,17 +252,11 @@ section p {
     </div>
 
     <div class="icon-links">
-        <a href="https://github.com/jnealon1" class="icon-link">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:jnealon1@gmail.com" class="icon-link">
-            <i class="fas fa-envelope"></i>
-        </a>
+        <a href="https://github.com/jnealon1" class="icon-link"><i class="fab fa-github"></i></a>
+        <a href="mailto:jnealon1@gmail.com" class="icon-link"><i class="fas fa-envelope"></i></a>
     </div>
 
-    <a href="resume26.pdf" download class="resume-link">
-        ⬇ Download Resume
-    </a>
+    <a href="resume26.pdf" class="resume-link" download>⬇ Download Resume</a>
 </div>
 
 <!-- MAIN -->
@@ -309,7 +305,6 @@ I transitioned into cybersecurity after experiencing a real-world cyber scam tha
 <p class="job-info">January 2019 – August 2019</p>
 <ul>
 <li>Analyzed case data and verified accuracy across systems.</li>
-<li>Conducted interviews to validate information.</li>
 <li>Ensured compliance with regulations and policies.</li>
 </ul>
 </div>
@@ -319,8 +314,7 @@ I transitioned into cybersecurity after experiencing a real-world cyber scam tha
 <p class="job-company">Illinois Department of Human Services</p>
 <p class="job-info">September 2018 – January 2019</p>
 <ul>
-<li>Reviewed cases for accuracy and compliance.</li>
-<li>Resolved discrepancies through investigation.</li>
+<li>Investigated cases and resolved discrepancies.</li>
 </ul>
 </div>
 
@@ -330,7 +324,6 @@ I transitioned into cybersecurity after experiencing a real-world cyber scam tha
 <p class="job-info">September 2017 – September 2018</p>
 <ul>
 <li>Handled sensitive data with strict confidentiality controls.</li>
-<li>Supported case accuracy and risk identification.</li>
 </ul>
 </div>
 
