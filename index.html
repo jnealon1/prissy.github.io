@@ -57,7 +57,7 @@ body {
     margin-bottom: 12px;
 }
 
-/* ================= FOCUS AREAS (REMOVED BOX STYLE) ================= */
+/* ================= FOCUS AREAS (FIXED - NO BOXES) ================= */
 .sidebar-section h2 {
     font-size: 12px;
     border-bottom: 1px solid rgba(255,255,255,0.4);
@@ -76,8 +76,12 @@ body {
     gap: 6px;
 }
 
-/* ❌ REMOVED BOX STYLING FROM ITEMS */
-/* (no background, no border, no padding) */
+/* 🔥 REMOVED ALL BOX STYLING */
+.sidebar-section ul li {
+    background: none;
+    padding: 0;
+    border: none;
+}
 
 /* ICON LINKS */
 .icon-links {
@@ -91,7 +95,8 @@ body {
     font-size: 16px;
     transition: 0.3s ease;
     display: inline-flex;
-    text-decoration: none; /* ✅ REMOVES UNDERLINE */
+    text-decoration: none !important;
+    border-bottom: none !important;
 }
 
 .icon-link:hover {
@@ -244,7 +249,7 @@ footer {
 
     <div class="icon-links">
         <a href="https://github.com/jnealon1" class="icon-link"><i class="fab fa-github"></i></a>
-        <a href="mailto:jnealon1@gmail.com" class="icon-link"><i class="fas fa-envelope"></i></a>
+        <a href="mailto:rubyrose1@gmail.com" class="icon-link"><i class="fas fa-envelope"></i></a>
     </div>
 
     <a href="resume26.pdf" class="resume-link">⬇ Download Resume</a>
@@ -260,7 +265,6 @@ footer {
     <a href="#contact">Contact</a>
 </div>
 
-<!-- CONTENT UNCHANGED -->
 <section id="about">
 <h2>About Me</h2>
 <p>...</p>
