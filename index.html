@@ -17,117 +17,87 @@
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     background: #f4f4f9;
-    display: flex;
     color: #333;
-    line-height: 1.6;
 }
 
-/* SIDEBAR */
+/* =========================
+   LEFT NAV (NOW SIDEBAR)
+========================= */
 .sidebar {
-    width: 230px;
+    width: 200px;
     position: fixed;
     height: 100vh;
     background: #2c2f48;
-    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 22px 15px;
-    text-align: center;
+    padding-top: 40px;
 }
 
-/* BIG PROFESSIONAL PHOTO */
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.sidebar a:hover {
+    color: #4da6ff;
+}
+
+/* =========================
+   TOP PROFILE BAR
+========================= */
+.top-bar {
+    margin-left: 200px;
+    background: #2c2f48;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 20px;
+}
+
+/* PROFILE IMAGE */
 .profile-photo {
-    width: 165px;
-    height: 165px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center top;
     border: 3px solid white;
-    margin-bottom: 12px;
 }
 
-/* NAME + FOCUS AREAS */
-.sidebar h2 {
-    font-size: 18px;
-    margin-bottom: 8px;
-    color: #ffffff;
+/* NAME + FOCUS */
+.profile-info h2 {
+    font-size: 20px;
 }
 
-.sidebar-section h2 {
+.profile-info p {
     font-size: 13px;
-    margin-top: 14px;
-    padding-bottom: 6px;
-    border-bottom: 2px solid #ffffff;
-    width: 100%;
-    color: #ffffff;
-}
-
-.sidebar-section ul {
-    list-style: none;
-    font-size: 13px;
-    margin-top: 10px;
-    line-height: 1.5;
-    color: #ffffff;
+    margin-top: 6px;
+    color: #dcdcdc;
 }
 
 /* ICONS */
 .icon-links {
+    margin-left: auto;
     display: flex;
-    gap: 12px;
-    margin-top: 12px;
+    gap: 15px;
 }
 
-.icon-link {
+.icon-links a {
     color: white;
     font-size: 18px;
 }
 
-.icon-link:hover {
-    color: #4da6ff;
-}
-
-/* RESUME */
-.resume-link {
-    margin-top: 12px;
-    font-size: 13px;
-    color: #d0d0d0;
-    text-decoration: none;
-}
-
-.resume-link:hover {
-    color: #4da6ff;
-}
-
-/* MAIN */
+/* =========================
+   MAIN CONTENT
+========================= */
 .main-content {
-    margin-left: 250px;
+    margin-left: 200px;
     padding: 40px;
-    max-width: 1100px;
-}
-
-/* TOP NAV (DARK BLUE + BIGGER) */
-.nav-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 35px;
-    padding: 20px 0;
-    background: #2c2f48;
-    border-radius: 10px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 17px;
-    font-weight: 600;
-    padding-bottom: 4px;
-    border-bottom: 2px solid transparent;
-}
-
-.nav-links a:hover {
-    border-bottom: 2px solid #4da6ff;
 }
 
 /* SECTIONS */
@@ -137,85 +107,34 @@ section {
     margin-bottom: 20px;
     border-radius: 10px;
     border-left: 5px solid #4da6ff;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
 }
 
 h2 {
-    font-size: 20px;
     margin-bottom: 12px;
-    color: #1f2235;
 }
 
-section p {
-    font-size: 15px;
-    color: #444;
-}
-
-/* EXPERIENCE */
-.job {
-    margin-bottom: 18px;
-}
-
-.job-title {
-    font-weight: 700;
-    font-size: 15px;
-}
-
-.job-company {
-    font-style: italic;
-    color: #555;
-    font-size: 13px;
-}
-
-.job-info {
-    font-size: 13px;
-    color: #777;
-    margin-bottom: 6px;
-}
-
-.job ul {
-    padding-left: 18px;
-    font-size: 14px;
-}
-
-/* CERTS */
-.cert-list {
-    list-style: none;
-}
-
-.cert-list li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    margin-bottom: 8px;
-}
-
-.cert-list i {
-    color: #4da6ff;
-}
-
-/* CONTACT */
-#contact i {
-    color: #4da6ff;
-    margin-right: 8px;
+/* FOOTER */
+footer {
+    margin-left: 200px;
+    background: #2c2f48;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
-
     .sidebar {
         width: 100%;
         height: auto;
-        position: relative;
+        flex-direction: row;
+        justify-content: center;
     }
 
-    .main-content {
+    .top-bar,
+    .main-content,
+    footer {
         margin-left: 0;
-        padding: 20px;
     }
 }
 </style>
@@ -223,94 +142,63 @@ section p {
 
 <body>
 
-<!-- SIDEBAR -->
+<!-- LEFT NAV -->
 <div class="sidebar">
-    <img src="PPhoto.png" class="profile-photo">
-
-    <h2>Jacquetta A. Nealon</h2>
-
-    <div class="sidebar-section">
-        <h2>Focus Areas</h2>
-        <ul>
-            <li>Cybersecurity Fundamentals</li>
-            <li>Threat Detection & Monitoring</li>
-            <li>System Security & Risk Awareness</li>
-            <li>Cloud & Infrastructure Concepts</li>
-        </ul>
-    </div>
-
-    <div class="icon-links">
-        <a href="https://github.com/jnealon1" class="icon-link">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:jnealon1@gmail.com" class="icon-link">
-            <i class="fas fa-envelope"></i>
-        </a>
-    </div>
-
-    <a href="resume26.pdf" download class="resume-link">
-        ⬇ Download Resume
-    </a>
-</div>
-
-<!-- MAIN -->
-<div class="main-content">
-
-<div class="nav-links">
-    <a href="#about">About Me</a>
+    <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#experience">Experience</a>
     <a href="#credentials">Credentials</a>
     <a href="#contact">Contact</a>
 </div>
 
+<!-- TOP PROFILE BAR -->
+<div class="top-bar">
+    <img src="PPhoto.png" class="profile-photo">
+
+    <div class="profile-info">
+        <h2>Jacquetta A. Nealon</h2>
+        <p>Cybersecurity Fundamentals • Threat Detection • Cloud Concepts</p>
+    </div>
+
+    <div class="icon-links">
+        <a href="https://github.com/jnealon1"><i class="fab fa-github"></i></a>
+        <a href="mailto:jnealon1@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="main-content">
+
 <section id="about">
 <h2>About Me</h2>
-<p>
-I transitioned into cybersecurity after experiencing a real-world cyber scam that exposed how easily attackers can exploit trust and systems. That experience shifted my focus toward understanding how cyber threats are detected, investigated, and prevented. I have a background in correctional and human services roles, where I developed strong skills in risk assessment, documentation, and operating in structured, security-focused environments. Today, I’m building technical skills in network security, Linux, Python, and cloud fundamentals, with a focus on security operations and threat detection. I’m especially interested in SOC environments, where monitoring and analysis help stop threats before they escalate. My goal is to contribute to cybersecurity teams by strengthening system defenses and turning threat awareness into actionable protection.
-</p>
+<p>Your same content here...</p>
 </section>
 
 <section id="education">
 <h2>Education</h2>
-<p>🎓 Associate in Applied Science in Cybersecurity, 2026</p>
-<p>Olive-Harvey College</p>
-<p>🎓 Bachelor of Science in Health Services Management, 2013</p>
-<p>Western Illinois University</p>
+<p>Your same content...</p>
 </section>
 
 <section id="experience">
 <h2>Experience</h2>
-
-<div class="job">
-<p class="job-title">Correctional Officer</p>
-<p class="job-company">Cook County Sheriff's Department</p>
-<p class="job-info">August 2019 – Present | Chicago, IL</p>
-<ul>
-<li>Investigate incidents and policy violations in a high-security environment.</li>
-<li>Maintain situational awareness and respond to security events.</li>
-<li>Document findings in detailed reports for compliance and audits.</li>
-</ul>
-</div>
-
+<p>Your same content...</p>
 </section>
 
 <section id="credentials">
 <h2>Credentials</h2>
-<ul class="cert-list">
-<li><i class="fas fa-shield-halved"></i> Advanced Cybersecurity Certification</li>
-<li><i class="fas fa-user-lock"></i> Google Cybersecurity Certification</li>
-<li><i class="fas fa-cloud"></i> AWS Cloud Certification</li>
-</ul>
+<p>Your same content...</p>
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
-<p><i class="fas fa-envelope"></i> rubyrose1@gmail.com</p>
-<p><i class="fab fa-github"></i> github.com/rubyrose1</p>
+<p>Your same content...</p>
 </section>
 
 </div>
+
+<footer>
+<p>© 2026 Prissy Princess | Cybersecurity Portfolio</p>
+</footer>
 
 </body>
 </html>
