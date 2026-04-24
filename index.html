@@ -78,16 +78,36 @@ body {
     margin-top: 10px;
 }
 
+/* ICON HOVER FIX */
 .icon-link {
     color: white;
     font-size: 16px;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.icon-link:hover {
+    transform: scale(1.2);
+    color: #4da6ff;
+    text-shadow: 0 0 12px rgba(77,166,255,0.7);
+}
+
+/* RESUME LINK */
 .resume-link {
     margin-top: 10px;
     font-size: 12px;
     color: #dcdcdc;
     text-decoration: none;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.resume-link:hover {
+    color: #4da6ff;
+    transform: scale(1.05);
+    text-shadow: 0 0 12px rgba(77,166,255,0.7);
 }
 
 /* ================= MAIN CONTENT ================= */
@@ -194,7 +214,7 @@ footer {
 
 <body>
 
-<!-- SIDEBAR ONLY -->
+<!-- SIDEBAR -->
 <div class="sidebar">
 
     <img src="PPhoto.png" class="profile-photo">
@@ -230,13 +250,17 @@ footer {
     <a href="#contact">Contact</a>
 </div>
 
-<!-- ONLY SECTIONS BELOW (NO HERO DUPLICATE ANYMORE) -->
-
+<!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
-<p>I transitioned into cybersecurity after experiencing a real-world cyber scam that exposed how easily attackers can exploit trust and systems...</p>
+<p>
+  I transitioned into cybersecurity after experiencing a real-world cyber scam that exposed how easily attackers can exploit trust and systems. That experience shifted my focus toward understanding how cyber threats are detected, investigated, and prevented. 
+  I have a background in correctional and human services roles, where I developed strong skills in risk assessment, documentation, and operating in structured, security-focused environments. Today, I’m building technical skills in network security, Linux, Python, and cloud fundamentals, with a focus on security operations and threat detection. 
+  I’m especially interested in SOC environments, where monitoring and analysis help stop threats before they escalate. My goal is to contribute to cybersecurity teams by strengthening system defenses and turning threat awareness into actionable protection.
+</p>
 </section>
 
+<!-- EDUCATION -->
 <section id="education">
 <h2>Education</h2>
 <p>🎓 Associate in Applied Science in Cybersecurity, 2026</p>
@@ -245,46 +269,79 @@ footer {
 <p>Western Illinois University</p>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
 <h2>Experience</h2>
+
 <div class="job">
-<p class="job-title">Correctional Officer</p>
-<p class="job-company">Cook County Sheriff's Department</p>
-<p class="job-info">August 2019 – Present | Chicago, IL</p>
-<ul>
-<li>Investigate incidents and policy violations...</li>
-</ul>
+    <p class="job-title">Correctional Officer</p>
+    <p class="job-company">Cook County Sheriff's Department</p>
+    <p class="job-info">August 2019 – Present | Chicago, IL</p>
+    <ul>
+        <li>Investigate incidents and policy violations in a high-security environment while maintaining continuous situational awareness to identify potential risks. Monitor operations and respond to security events to support containment and resolution efforts. Document observations, incidents, and investigative findings in detailed, accurate reports to support compliance, audits, and internal review.</li>
+    </ul>
 </div>
+
+<div class="job">
+    <p class="job-title">Human Services Caseworker</p>
+    <p class="job-company">Illinois Department of Human Services</p>
+    <p class="job-info">January 2019 – August 2019 | Chicago, Illinois</p>
+    <ul>
+        <li>Analyzed case information across internal databases and external sources to detect inconsistencies and support accurate decision-making. Verified data accuracy through interviews with clients and associated parties. Applied regulatory guidelines and compiled structured investigative documentation for compliance and audits.</li>
+    </ul>
+</div>
+
+<div class="job">
+    <p class="job-title">TANF Caseworker</p>
+    <p class="job-company">Illinois Department of Human Services</p>
+    <p class="job-info">September 2018 – January 2019 | Chicago, Illinois</p>
+    <ul>
+        <li>Investigated cases by analyzing data from multiple sources, conducted interviews, ensured compliance with policies, and documented findings for audits and reviews.</li>
+    </ul>
+</div>
+
+<div class="job">
+    <p class="job-title">Social Service Career Trainee</p>
+    <p class="job-company">Illinois Department of Human Services</p>
+    <p class="job-info">September 2017 – September 2018 | Chicago, Illinois</p>
+    <ul>
+        <li>Handled confidential data, ensured compliance with privacy controls, analyzed case information, and supported risk mitigation and data integrity efforts.</li>
+    </ul>
+</div>
+
 </section>
 
+<!-- CREDENTIALS -->
 <section id="credentials">
 <h2>Credentials</h2>
 <ul class="cert-list">
-<li><i class="fas fa-shield-halved"></i> Advanced Cybersecurity Certification</li>
-<li><i class="fas fa-user-lock"></i> Google Cybersecurity Certification</li>
-<li><i class="fas fa-cloud"></i> AWS Cloud Certification</li>
+    <li><i class="fas fa-shield-halved"></i> City Colleges of Chicago Advanced Cybersecurity Certification</li>
+    <li><i class="fas fa-user-lock"></i> Google Cybersecurity Certification</li>
+    <li><i class="fas fa-cloud"></i> Amazon AWS Cloud Certification</li>
 </ul>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
-<p><i class="fas fa-envelope"></i> rubyrose1@gmail.com</p>
-<p><i class="fab fa-github"></i> github.com/rubyrose1</p>
+
+<p>
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:rubyrose1@gmail.com">rubyrose1@gmail.com</a>
+</p>
+
+<p>
+    <i class="fab fa-github"></i>
+    <a href="https://github.com/rubyrose1" target="_blank">
+        github.com/rubyrose1
+    </a>
+</p>
 </section>
 
 </div>
 
-<footer>
-<p>© 2026 Prissy Princess | Cybersecurity Portfolio</p>
-</footer>
-
 </body>
 </html>
-
-
-
-
-
 
 
 
