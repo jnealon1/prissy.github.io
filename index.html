@@ -22,9 +22,9 @@ body {
     color: #333;
 }
 
-/* SIDEBAR (tightened) */
+/* SIDEBAR */
 .sidebar {
-    width: 210px;              /* tighter */
+    width: 210px;
     position: fixed;
     height: 100%;
     background: #2c2f48;
@@ -32,12 +32,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;             /* reduced padding */
+    padding: 15px;
     text-align: center;
 }
 
 .profile-photo {
-    width: 140px;              /* smaller */
+    width: 140px;
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
@@ -55,12 +55,12 @@ body {
     margin: 10px 0 5px;
 }
 
-/* Focus Areas underline */
+/* Focus Areas */
 .sidebar-section h2 {
     font-size: 16px;
     margin-top: 15px;
     padding-bottom: 5px;
-    border-bottom: 2px solid white;  /* WHITE UNDERLINE */
+    border-bottom: 2px solid white;
     width: 100%;
 }
 
@@ -103,7 +103,7 @@ body {
     border-bottom: 2px solid #4da6ff;
 }
 
-/* MAIN */
+/* MAIN CONTENT */
 .main-content {
     margin-left: 230px;
     padding: 40px;
@@ -138,21 +138,31 @@ section {
     border-radius: 6px;
 }
 
-/* EXPERIENCE */
+/* JOBS */
 .job {
     margin-bottom: 18px;
 }
 
-.job-title { font-weight: 700; }
-.job-company { font-style: italic; color: #444; }
-.job-info { font-size: 13px; color: #666; }
+.job-title {
+    font-weight: 700;
+}
+
+.job-company {
+    font-style: italic;
+    color: #444;
+}
+
+.job-info {
+    font-size: 13px;
+    color: #666;
+}
 
 .job ul {
     margin-top: 6px;
     padding-left: 18px;
 }
 
-/* CREDENTIALS */
+/* CERTIFICATIONS */
 .cert-list {
     list-style: none;
 }
@@ -176,9 +186,19 @@ section {
 
 /* MOBILE */
 @media (max-width: 768px) {
-    body { flex-direction: column; }
-    .sidebar { position: relative; width: 100%; }
-    .main-content { margin-left: 0; }
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
 }
 </style>
 </head>
@@ -215,7 +235,7 @@ section {
     </a>
 </div>
 
-<!-- MAIN -->
+<!-- MAIN CONTENT -->
 <div class="main-content">
 
 <div class="nav-links">
@@ -226,7 +246,88 @@ section {
     <a href="#contact">Contact</a>
 </div>
 
-<!-- (rest of your content stays exactly the same) -->
+<section id="about">
+<h2>About Me</h2>
+<p>
+I transitioned into cybersecurity after experiencing a real-world cyber scam that exposed how easily attackers can exploit trust and systems. That experience shifted my focus toward understanding how cyber threats are detected, investigated, and prevented.
+I have a background in correctional and human services roles, where I developed strong skills in risk assessment, documentation, and operating in structured, security-focused environments. Today, I’m building technical skills in network security, Linux, Python, and cloud fundamentals, with a focus on security operations and threat detection.
+I’m especially interested in SOC environments, where monitoring and analysis help stop threats before they escalate. My goal is to contribute to cybersecurity teams by strengthening system defenses and turning threat awareness into actionable protection.
+</p>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<p>🎓 Associate in Applied Science in Cybersecurity, 2026</p>
+<p>Olive-Harvey College</p>
+<p>🎓 Bachelor of Science in Health Services Management, 2013</p>
+<p>Western Illinois University</p>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+
+<div class="job">
+<p class="job-title">Correctional Officer</p>
+<p class="job-company">Cook County Sheriff's Department</p>
+<p class="job-info">August 2019 – Present | Chicago, IL</p>
+<ul>
+<li>Investigate incidents and policy violations in a high-security environment...</li>
+</ul>
+</div>
+
+<div class="job">
+<p class="job-title">Human Services Caseworker</p>
+<p class="job-company">Illinois Department of Human Services</p>
+<p class="job-info">January 2019 – August 2019</p>
+<ul>
+<li>Analyzed case information and verified data accuracy...</li>
+</ul>
+</div>
+
+<div class="job">
+<p class="job-title">TANF Caseworker</p>
+<p class="job-company">Illinois Department of Human Services</p>
+<p class="job-info">September 2018 – January 2019</p>
+<ul>
+<li>Investigated cases and ensured compliance...</li>
+</ul>
+</div>
+
+<div class="job">
+<p class="job-title">Social Service Career Trainee</p>
+<p class="job-company">Illinois Department of Human Services</p>
+<p class="job-info">September 2017 – September 2018</p>
+<ul>
+<li>Handled confidential data and supported case accuracy...</li>
+</ul>
+</div>
+
+</section>
+
+<section id="credentials">
+<h2>Credentials</h2>
+<ul class="cert-list">
+<li><i class="fas fa-shield-halved"></i> Advanced Cybersecurity Certification</li>
+<li><i class="fas fa-user-lock"></i> Google Cybersecurity Certification</li>
+<li><i class="fas fa-cloud"></i> AWS Cloud Certification</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+
+<p>
+<i class="fas fa-envelope"></i>
+<a href="mailto:rubyrose1@gmail.com">rubyrose1@gmail.com</a>
+</p>
+
+<p>
+<i class="fab fa-github"></i>
+<a href="https://github.com/rubyrose1" target="_blank">
+github.com/rubyrose1
+</a>
+</p>
+</section>
 
 </div>
 
