@@ -17,68 +17,90 @@
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     background: #f4f4f9;
+    display: flex;
     color: #333;
 }
 
 /* =========================
-   TOP PROFILE SECTION
+   SIDEBAR
 ========================= */
-.top-profile {
+.sidebar {
+    width: 210px;
+    position: fixed;
+    height: 100vh;
     background: #2c2f48;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 12px;
     text-align: center;
-    padding: 40px 20px 30px;
 }
 
-/* PROFILE IMAGE */
+/* PROFILE PHOTO */
 .profile-photo {
-    width: 170px;
-    height: 170px;
+    width: 155px;
+    height: 155px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
-    border: 4px solid white;
-    margin-bottom: 15px;
-}
-
-/* NAME */
-.top-profile h1 {
-    font-size: 24px;
+    border: 3px solid white;
     margin-bottom: 10px;
 }
 
-/* 🔥 PROFESSIONAL FOCUS AREA STYLE */
-.focus-areas {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 10px;
+/* NAME */
+.sidebar h2 {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: white;
 }
 
-.focus-areas span {
-    background: rgba(255,255,255,0.15);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 13px;
-    border: 1px solid rgba(255,255,255,0.3);
+/* FOCUS AREAS */
+.sidebar-section h2 {
+    font-size: 12px;
+    margin-top: 12px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid white;
+    width: 100%;
+    color: white;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    font-size: 12px;
+    margin-top: 8px;
+    line-height: 1.4;
+    color: white;
 }
 
 /* ICONS */
 .icon-links {
-    margin-top: 15px;
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-.icon-links a {
+.icon-link {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-.icon-links a:hover {
-    color: #4da6ff;
+/* RESUME */
+.resume-link {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #dcdcdc;
+    text-decoration: none;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.main-content {
+    margin-left: 230px;
+    padding: 40px;
+    padding-bottom: 80px;
+    max-width: 1100px;
 }
 
 /* =========================
@@ -88,14 +110,16 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
+    margin-bottom: 25px;
     padding: 15px;
-    background: white;
-    font-weight: 600;
+    background: #2c2f48;
+    border-radius: 10px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #2c2f48;
+    color: white;
+    font-weight: 600;
 }
 
 .nav-links a:hover {
@@ -103,15 +127,40 @@ body {
 }
 
 /* =========================
-   MAIN CONTENT
+   HERO SECTION (KEY UPGRADE)
 ========================= */
-.main-content {
-    max-width: 1000px;
-    margin: auto;
+.hero {
+    background: white;
     padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
 }
 
-/* SECTIONS */
+.hero-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid #2c2f48;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.hero-title {
+    font-size: 15px;
+    color: #555;
+}
+
+/* =========================
+   SECTIONS
+========================= */
 section {
     background: white;
     padding: 24px;
@@ -124,18 +173,82 @@ h2 {
     margin-bottom: 12px;
 }
 
+/* EXPERIENCE */
+.job {
+    margin-bottom: 18px;
+}
+
+.job-title {
+    font-weight: 700;
+}
+
+.job-company {
+    font-style: italic;
+    font-size: 13px;
+}
+
+.job-info {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.job ul {
+    padding-left: 18px;
+}
+
+/* CERTS */
+.cert-list {
+    list-style: none;
+}
+
+.cert-list li {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.cert-list i {
+    color: #4da6ff;
+}
+
+/* CONTACT */
+#contact i {
+    color: #4da6ff;
+    margin-right: 8px;
+}
+
 /* FOOTER */
 footer {
     background: #2c2f48;
     color: white;
     text-align: center;
     padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 210px;
+    width: calc(100% - 210px);
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-    .focus-areas {
-        gap: 8px;
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    footer {
+        left: 0;
+        width: 100%;
     }
 }
 </style>
@@ -143,25 +256,32 @@ footer {
 
 <body>
 
-<!-- TOP PROFILE -->
-<div class="top-profile">
+<!-- SIDEBAR -->
+<div class="sidebar">
     <img src="PPhoto.png" class="profile-photo">
 
-    <h1>Jacquetta A. Nealon</h1>
+    <h2>Jacquetta A. Nealon</h2>
 
-    <!-- 🔥 CLEAN FOCUS AREAS -->
-    <div class="focus-areas">
-        <span>Cybersecurity Fundamentals</span>
-        <span>Threat Detection</span>
-        <span>System Security</span>
-        <span>Cloud Concepts</span>
+    <div class="sidebar-section">
+        <h2>Focus Areas</h2>
+        <ul>
+            <li>Cybersecurity Fundamentals</li>
+            <li>Threat Detection & Monitoring</li>
+            <li>System Security & Risk Awareness</li>
+            <li>Cloud & Infrastructure Concepts</li>
+        </ul>
     </div>
 
     <div class="icon-links">
-        <a href="https://github.com/jnealon1"><i class="fab fa-github"></i></a>
-        <a href="mailto:jnealon1@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/jnealon1" class="icon-link"><i class="fab fa-github"></i></a>
+        <a href="mailto:jnealon1@gmail.com" class="icon-link"><i class="fas fa-envelope"></i></a>
     </div>
+
+    <a href="resume26.pdf" class="resume-link">⬇ Download Resume</a>
 </div>
+
+<!-- MAIN -->
+<div class="main-content">
 
 <!-- NAV -->
 <div class="nav-links">
@@ -172,36 +292,65 @@ footer {
     <a href="#contact">Contact</a>
 </div>
 
-<!-- MAIN -->
-<div class="main-content">
+<!-- HERO -->
+<div class="hero">
+    <img src="PPhoto.png" class="hero-photo">
+    <h1>Jacquetta A. Nealon</h1>
+    <p class="hero-title">
+        Cybersecurity Professional | Threat Detection | Cloud Security
+    </p>
+</div>
 
+<!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
-<p>Your same content here...</p>
+<p>
+I transitioned into cybersecurity after experiencing a real-world cyber scam that exposed how easily attackers can exploit trust and systems...
+</p>
 </section>
 
+<!-- EDUCATION -->
 <section id="education">
 <h2>Education</h2>
-<p>Your same content...</p>
+<p>🎓 Associate in Applied Science in Cybersecurity, 2026</p>
+<p>Olive-Harvey College</p>
+<p>🎓 Bachelor of Science in Health Services Management, 2013</p>
+<p>Western Illinois University</p>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
 <h2>Experience</h2>
-<p>Your same content...</p>
+<div class="job">
+<p class="job-title">Correctional Officer</p>
+<p class="job-company">Cook County Sheriff's Department</p>
+<p class="job-info">August 2019 – Present | Chicago, IL</p>
+<ul>
+<li>Investigate incidents and policy violations...</li>
+</ul>
+</div>
 </section>
 
+<!-- CREDENTIALS -->
 <section id="credentials">
 <h2>Credentials</h2>
-<p>Your same content...</p>
+<ul class="cert-list">
+<li><i class="fas fa-shield-halved"></i> Advanced Cybersecurity Certification</li>
+<li><i class="fas fa-user-lock"></i> Google Cybersecurity Certification</li>
+<li><i class="fas fa-cloud"></i> AWS Cloud Certification</li>
+</ul>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
-<p>Your same content...</p>
+<p><i class="fas fa-envelope"></i> rubyrose1@gmail.com</p>
+<p><i class="fab fa-github"></i> github.com/rubyrose1</p>
 </section>
 
 </div>
 
+<!-- FOOTER -->
 <footer>
 <p>© 2026 Prissy Princess | Cybersecurity Portfolio</p>
 </footer>
