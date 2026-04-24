@@ -40,12 +40,19 @@ body {
 
 /* 🔥 BIGGER PROFESSIONAL PHOTO */
 .profile-photo {
-    width: 160px;
-    height: 160px;
+    width: 190px;
+    height: 190px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: center top;
     border: 3px solid white;
     margin-bottom: 12px;
+    transition: all 0.3s ease; 
+
+.profile-photo:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 30px rgba(77,166,255,0.4);
+    border-color: #4da6ff;
+   
 }
 
 /* 🔥 NAME + TEXT PURE WHITE */
@@ -107,6 +114,22 @@ body {
     margin-left: 250px;
     padding: 40px;
     max-width: 1100px;
+    
+footer 
+    background: #2c2f48;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-center:230px
+    
+    position: fixed;
+    bottom: 0;
+    left: 230px;   /* matches sidebar width */
+    width: calc(100% - 230px); /* prevents overlap with sidebar */
+}
+
+
+    
 }
 
 /* =========================
