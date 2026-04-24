@@ -21,69 +21,54 @@ body {
 }
 
 /* =========================
-   LEFT NAV (NOW SIDEBAR)
+   TOP PROFILE SECTION
 ========================= */
-.sidebar {
-    width: 200px;
-    position: fixed;
-    height: 100vh;
-    background: #2c2f48;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 40px;
-}
-
-.sidebar a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    margin: 15px 0;
-    font-weight: 600;
-}
-
-.sidebar a:hover {
-    color: #4da6ff;
-}
-
-/* =========================
-   TOP PROFILE BAR
-========================= */
-.top-bar {
-    margin-left: 200px;
+.top-profile {
     background: #2c2f48;
     color: white;
-    display: flex;
-    align-items: center;
-    padding: 20px 40px;
-    gap: 20px;
+    text-align: center;
+    padding: 40px 20px 30px;
 }
 
 /* PROFILE IMAGE */
 .profile-photo {
-    width: 110px;
-    height: 110px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
-    border: 3px solid white;
+    border: 4px solid white;
+    margin-bottom: 15px;
 }
 
-/* NAME + FOCUS */
-.profile-info h2 {
-    font-size: 20px;
+/* NAME */
+.top-profile h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.profile-info p {
+/* 🔥 PROFESSIONAL FOCUS AREA STYLE */
+.focus-areas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.focus-areas span {
+    background: rgba(255,255,255,0.15);
+    padding: 6px 12px;
+    border-radius: 20px;
     font-size: 13px;
-    margin-top: 6px;
-    color: #dcdcdc;
+    border: 1px solid rgba(255,255,255,0.3);
 }
 
 /* ICONS */
 .icon-links {
-    margin-left: auto;
+    margin-top: 15px;
     display: flex;
+    justify-content: center;
     gap: 15px;
 }
 
@@ -92,12 +77,38 @@ body {
     font-size: 18px;
 }
 
+.icon-links a:hover {
+    color: #4da6ff;
+}
+
+/* =========================
+   NAV BAR
+========================= */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background: white;
+    font-weight: 600;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c2f48;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #4da6ff;
+}
+
 /* =========================
    MAIN CONTENT
 ========================= */
 .main-content {
-    margin-left: 200px;
-    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
 }
 
 /* SECTIONS */
@@ -115,7 +126,6 @@ h2 {
 
 /* FOOTER */
 footer {
-    margin-left: 200px;
     background: #2c2f48;
     color: white;
     text-align: center;
@@ -124,17 +134,8 @@ footer {
 
 /* MOBILE */
 @media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .top-bar,
-    .main-content,
-    footer {
-        margin-left: 0;
+    .focus-areas {
+        gap: 8px;
     }
 }
 </style>
@@ -142,28 +143,33 @@ footer {
 
 <body>
 
-<!-- LEFT NAV -->
-<div class="sidebar">
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#credentials">Credentials</a>
-    <a href="#contact">Contact</a>
-</div>
-
-<!-- TOP PROFILE BAR -->
-<div class="top-bar">
+<!-- TOP PROFILE -->
+<div class="top-profile">
     <img src="PPhoto.png" class="profile-photo">
 
-    <div class="profile-info">
-        <h2>Jacquetta A. Nealon</h2>
-        <p>Cybersecurity Fundamentals • Threat Detection • Cloud Concepts</p>
+    <h1>Jacquetta A. Nealon</h1>
+
+    <!-- 🔥 CLEAN FOCUS AREAS -->
+    <div class="focus-areas">
+        <span>Cybersecurity Fundamentals</span>
+        <span>Threat Detection</span>
+        <span>System Security</span>
+        <span>Cloud Concepts</span>
     </div>
 
     <div class="icon-links">
         <a href="https://github.com/jnealon1"><i class="fab fa-github"></i></a>
         <a href="mailto:jnealon1@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
+</div>
+
+<!-- NAV -->
+<div class="nav-links">
+    <a href="#about">About Me</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#contact">Contact</a>
 </div>
 
 <!-- MAIN -->
