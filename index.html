@@ -34,10 +34,11 @@ body {
 }
 
 .profile-photo {
-    width: 140px;
-    height: 140px;
+    width: 165px;
+    height: 165px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center top; /* better head framing */
     border: 3px solid white;
     margin-bottom: 10px;
 }
@@ -148,7 +149,65 @@ ul {
         margin-left: 0;
     }
 }
+.status-card {
+    margin-top: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #0f172a;
+    border: 1px solid rgba(77, 166, 255, 0.4);
+}
 
+/* headline */
+.status-line {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+/* dot (keeps your blue theme) */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #4da6ff;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+}
+
+.status-dot::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #4da6ff;
+    border-radius: 50%;
+    animation: pulse 1.8s infinite;
+    opacity: 0.4;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.4; }
+    70% { transform: scale(2.2); opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* tags */
+.status-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.status-tags span {
+    font-size: 11px;
+    padding: 3px 7px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 10px;
+    color: #cbd5e1;
+}
 .status-dot {
     width: 10px;
     height: 10px;
@@ -276,11 +335,18 @@ ul {
         Actively Seeking Opportunities
     </div>
 
-    <div class="status-items">
-        <div>Cybersecurity Internships</div>
-        <div>SOC Analyst Roles</div>
-        <div>Security Operations</div>
+    <div class="status-card">
+    <div class="status-line">
+        <span class="status-dot"></span>
+        Actively Seeking Cybersecurity Roles
     </div>
+
+    <div class="status-tags">
+        <span>Internships</span>
+        <span>SOC Analyst</span>
+        <span>Security Operations</span>
+    </div>
+</div>
 </div>
 
 </div>
