@@ -3,31 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jacquetta A. Nealon | Cybersecurity Portfolio</title>
+<title>Jacquetta A. Nealon | Cybersecurity Resume</title>
 
-<!-- FONT AWESOME -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
+/* GLOBAL */
+* {
+    font-family: "Segoe UI", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background: #f4f4f9;
     display: flex;
+    color: #333;
 }
 
 /* SIDEBAR */
 .sidebar {
-    width: 220px;
-    position: fixed;
-    height: 100%;
-    background-color: #2c2f48;
+    width: 240px;
+    background: #2c2f48;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    padding: 25px;
     text-align: center;
 }
 
@@ -37,15 +39,11 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid white;
-    transition: 0.3s;
+    margin-bottom: 10px;
 }
 
-.profile-photo:hover {
-    box-shadow: 0 0 25px #4da6ff;
-    transform: scale(1.05);
-}
-
-.sidebar h2 {
+.sidebar h1 {
+    font-size: 20px;
     margin: 10px 0 5px;
 }
 
@@ -54,79 +52,71 @@ body {
     color: #b0b3c6;
 }
 
-/* ICONS */
 .icon-links {
+    margin-top: 15px;
     display: flex;
+    justify-content: center;
     gap: 15px;
-    margin-top: 10px;
 }
 
-.icon-link {
+.icon-links a {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
 }
 
-.icon-link:hover {
+.icon-links a:hover {
     color: #4da6ff;
-}
-
-/* RESUME */
-.resume-link {
-    margin-top: 10px;
-    color: #b0b3c6;
-    text-decoration: none;
-    font-size: 14px;
-    border-bottom: 2px solid transparent;
-    transition: 0.3s;
-}
-
-.resume-link:hover {
-    color: #4da6ff;
-    border-bottom: 2px solid #4da6ff;
 }
 
 /* MAIN */
 .main-content {
-    margin-left: 240px;
+    margin-left: 260px;
     padding: 40px;
-    flex: 1;
-}
-
-/* NAV */
-.nav-links {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #2c2f48;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 5px;
-}
-
-.nav-links a:hover {
-    border-bottom: 2px solid #4da6ff;
 }
 
 /* SECTIONS */
-section {
-    margin-bottom: 40px;
+.section {
     background: white;
     padding: 20px;
-    border-radius: 8px;
+    margin-bottom: 20px;
     border-left: 5px solid #4da6ff;
+    border-radius: 6px;
 }
 
-
-#education p {
-    margin: 4px 0;
-    line-height: 1.3;
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-    
+p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* EXPERIENCE STYLE */
+.job {
+    margin-bottom: 18px;
+}
+
+.job-title {
+    font-weight: 700;
+}
+
+.job-company {
+    font-style: italic;
+    color: #444;
+}
+
+.job-info {
+    font-size: 13px;
+    color: #666;
+}
+
+ul {
+    margin-top: 6px;
+    padding-left: 18px;
+}
+
 /* CERTIFICATIONS */
 .cert-list {
     list-style: none;
@@ -134,74 +124,31 @@ section {
 }
 
 .cert-list li {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* CONTACT */
-#contact i {
-    margin-right: 8px;
-}
-
-/* ICON STYLE + GLOW */
-.cert-list i,
-#contact i {
-    color: #4da6ff;
-    transition: 0.3s;
-}
-
-.cert-list i:hover,
-#contact i:hover {
-    text-shadow: 0 0 8px #4da6ff, 0 0 15px #4da6ff;
-    transform: scale(1.2);
-}
-
-/* ========================= */
-/* EXPERIENCE UPDATED STYLE */
-/* ========================= */
-
-.job {
-    margin-bottom: 25px;
-}
-
-.job p {
-    margin: 0;
-    line-height: 1.4;
-}
-
-/* JOB TITLE → BOLD */
-.job-title {
-    font-weight: 800;
-    margin-bottom: 2px;
-}
-
-/* COMPANY → ITALIC */
-.job-company {
-    font-style: italic;
-    font-weight: 400;
-    margin-bottom: 2px;
-}
-
-/* DATE LINE */
-.job-info {
-    font-size: 14px;
-    color: #555;
     margin-bottom: 8px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
-/* LIST CLEANUP */
-.job ul {
-    margin-top: 8px;
+.cert-list i {
+    color: #4da6ff;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    body { flex-direction: column; }
-    .sidebar { position: relative; width: 100%; height: auto; }
-    .main-content { margin-left: 0; }
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .main-content {
+        margin-left: 0;
+    }
 }
+
 </style>
 </head>
 
@@ -211,166 +158,81 @@ section {
 <div class="sidebar">
     <img src="PPhoto.png" class="profile-photo">
 
-    <h2>Jacquetta A. Nealon</h2>
+    <h1>Jacquetta A. Nealon</h1>
     <p>Cybersecurity Student</p>
 
     <div class="icon-links">
-        <a href="https://github.com/jnealon1" class="icon-link">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:jnealon1@gmail.com" class="icon-link">
-            <i class="fas fa-envelope"></i>
-        </a>
+        <a href="https://github.com/jnealon1"><i class="fab fa-github"></i></a>
+        <a href="mailto:jnealon1@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
-
-    <a href="resume26.pdf" download class="resume-link">
-        ⬇ Download Resume
-    </a>
-</div>
 
 <!-- MAIN -->
 <div class="main-content">
 
-<div class="nav-links">
-    <a href="#about">About Me</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
+<!-- SUMMARY -->
+<div class="section">
+    <h2>Professional Summary</h2>
+    <p>
+        Cybersecurity student with experience in investigative work, risk analysis, and data handling.
+        Strong interest in threat detection, digital security, and ethical hacking. Skilled in Linux, Python,
+        and cloud fundamentals with a focus on protecting systems and sensitive data.
+    </p>
 </div>
-
-<!-- ABOUT -->
-<section id="about">
-<h2>About Me</h2>
-<p>
-After experiencing a cyber-related scam in which individuals impersonated a well-known company and stole funds, I became deeply interested in understanding how such attacks occur and how they can be prevented. 
-What began as a challenging experience quickly evolved into a strong motivation to learn more about cybercrime and digital security. In 2024, I returned to school to formally pursue cybersecurity. 
-Since then, I have been dedicated to building my knowledge in areas such as network security, threat analysis, and ethical hacking. 
-I enjoy learning Linux, Python, and cloud infrastructure while continuing to build technical skills. I am committed to applying my skills and experience to enhance digital security and support individuals and organizations in protecting against evolving cyber threats.
-</p>
-</section>
 
 <!-- EDUCATION -->
-<section id="education">
-<h2>Education</h2>
-<p>🎓 Associate in Applied Science in Cybersecurity, 2026</p>
-<p>Olive-Harvey College</p>
-<p>🎓 Bachelor of Science in Health Services Management, 2013</p>
-<p>Western Illinois University</p>
-</section>
+<div class="section">
+    <h2>Education</h2>
+    <p>🎓 Associate in Applied Science in Cybersecurity, 2026</p>
+    <p>Olive-Harvey College</p>
+    <p>🎓 Bachelor of Science in Health Services Management, 2013</p>
+    <p>Western Illinois University</p>
+</div>
 
 <!-- EXPERIENCE -->
-<section id="experience">
-<h2>Experience</h2>
+<div class="section">
+    <h2>Experience</h2>
 
-<div class="job">
-    <p class="job-title">Correctional Officer</p>
-    <p class="job-company">Cook County Sheriff's Department</p>
-    <p class="job-info">August 2019 – Present | Chicago, IL</p>
-    <ul>
-        <li>Conduct investigations into incidents and potential violations, gathering and analyzing evidence to support findings.</li>
-        <li>Perform regular security checks and surveillance to identify risks and maintain a secure environment.</li>
-        <li>Document observations, incidents, and investigative findings in detailed, accurate reports.</li>
-        <li>Maintain strict confidentiality while handling sensitive information and evidence.</li>
-        <li>Collaborate with internal teams to address safety concerns and support investigative processes.</li>
-    </ul>
+    <div class="job">
+        <div class="job-title">Correctional Officer</div>
+        <div class="job-company">Cook County Sheriff's Department</div>
+        <div class="job-info">Aug 2019 – Present | Chicago, IL</div>
+        <ul>
+            <li>Conduct investigations into incidents and potential violations.</li>
+            <li>Perform security checks and surveillance.</li>
+            <li>Document findings in detailed reports.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <div class="job-title">Human Services Caseworker</div>
+        <div class="job-company">Illinois Department of Human Services</div>
+        <div class="job-info">Jan 2019 – Aug 2019</div>
+    </div>
+
 </div>
-
-<div class="job">
-    <p class="job-title">Human Services Caseworker</p>
-    <p class="job-company">Illinois Department of Human Services</p>
-    <p class="job-info">January 2019 – August 2019 | Chicago, Illinois</p>
-    <ul>
-        <li>Investigated human services cases by collecting, analyzing, and interpreting data from internal systems and external sources.</li>
-        <li>Conducted interviews with clients and relevant parties to verify information and support case determinations.</li>
-        <li>Reviewed policies, regulations, and eligibility requirements to ensure compliance and accurate case outcomes.</li>
-        <li>Prepared detailed investigative reports and maintained organized documentation for audit and legal purposes.</li>
-    </ul>
-</div>
-
-<div class="job">
-    <p class="job-title">TANF Caseworker</p>
-    <p class="job-company">Illinois Department of Human Services</p>
-    <p class="job-info">September 2018 – January 2019 | Chicago, Illinois</p>
-    <ul>
-        <li>Managed sensitive client information while ensuring compliance with privacy laws and data protection requirements.</li>
-        <li>Monitored program eligibility systems and verified documentation to ensure regulatory compliance.</li>
-        <li>Collaborated with Public Health divisions and state agencies while managing sensitive client data.</li>
-        <li>Managed caseload data and updated eligibility systems to maintain accurate records.</li>
-    </ul>
-</div>
-
-<div class="job">
-    <p class="job-title">Social Service Career Trainee</p>
-    <p class="job-company">Illinois Department of Human Services</p>
-    <p class="job-info">September 2017 – September 2018 | Chicago, Illinois</p>
-    <ul>
-        <li>Handled confidential financial, medical, and criminal history data while applying strict data protection measures.</li>
-        <li>Analyzed case data and collaborated with cross-functional teams to ensure accuracy and compliance.</li>
-        <li>Identified potential risks during case reviews and supported mitigation strategies.</li>
-    </ul>
-</div>
-
-</section>
 
 <!-- CERTIFICATIONS -->
-<section id="certifications">
-<h2>Certifications</h2>
-<ul class="cert-list">
-    <li><i class="fas fa-shield-halved"></i> City Colleges of Chicago Advanced Cybersecurity Certification</li>
-    <li><i class="fas fa-user-lock"></i> Google Cybersecurity Certification</li>
-    <li><i class="fas fa-cloud"></i> Amazon AWS Cloud Certification</li>
-</ul>
-</section>
+<div class="section">
+    <h2>Certifications</h2>
+
+    <ul class="cert-list">
+        <li><i class="fas fa-shield-halved"></i> Advanced Cybersecurity Certification</li>
+        <li><i class="fas fa-user-lock"></i> Google Cybersecurity Certification</li>
+        <li><i class="fas fa-cloud"></i> AWS Cloud Certification</li>
+    </ul>
+</div>
 
 <!-- CONTACT -->
-<section id="contact">
-<h2>Contact</h2>
-
-<p>
-    <i class="fas fa-envelope"></i>
-    <a href="mailto:rubyrose1@gmail.com">rubyrose1@gmail.com</a>
-</p>
-
-<p>
-    <i class="fab fa-github"></i>
-    <a href="https://github.com/rubyrose1" target="_blank">
-        github.com/rubyrose1
-    </a>
-</p>
-</section>
+<div class="section">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i> jnealon1@gmail.com</p>
+    <p><i class="fab fa-github"></i> github.com/jnealon1</p>
+</div>
 
 </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
