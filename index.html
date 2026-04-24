@@ -11,8 +11,8 @@
 :root {
     --bg: #0b0f1a;
     --card: rgba(255,255,255,0.06);
-    --text: #e6e6e6;
-    --muted: #a9b0c3;
+    --text: #eaeaea;
+    --muted: #b3b9c9;
     --accent: #4da6ff;
 }
 
@@ -27,16 +27,18 @@ body {
     background: radial-gradient(circle at top, #141a2e, var(--bg));
     color: var(--text);
     display: flex;
+    font-size: 16px; /* 🔥 bigger base text */
+    line-height: 1.7;
 }
 
 /* =========================
-   GLASSMORPHIC SIDEBAR
+   WIDER MODERN SIDEBAR
 ========================= */
 .sidebar {
-    width: 210px;
+    width: 260px; /* 🔥 increased from small version */
     height: 100vh;
     position: fixed;
-    padding: 18px 14px;
+    padding: 22px 16px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(12px);
     border-right: 1px solid rgba(255,255,255,0.08);
@@ -47,58 +49,56 @@ body {
 }
 
 .profile-photo {
-    width: 105px;
-    height: 105px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.2);
-    margin-bottom: 10px;
+    border: 2px solid rgba(255,255,255,0.25);
+    margin-bottom: 12px;
     object-fit: cover;
 }
 
 .sidebar h2 {
-    font-size: 15px;
+    font-size: 18px; /* 🔥 larger name */
     margin-bottom: 8px;
 }
 
 .sidebar-section h2 {
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: 13px;
     text-transform: uppercase;
+    letter-spacing: 1px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
     padding-bottom: 6px;
-    margin-top: 12px;
+    margin-top: 14px;
 }
 
 .sidebar-section ul {
     list-style: none;
-    font-size: 12px;
+    font-size: 13px;
     color: var(--muted);
     margin-top: 10px;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* ICONS */
 .icon-links {
     display: flex;
-    gap: 12px;
-    margin-top: 14px;
+    gap: 14px;
+    margin-top: 16px;
 }
 
 .icon-link {
     color: var(--text);
-    font-size: 16px;
-    transition: 0.3s;
+    font-size: 18px;
 }
 
 .icon-link:hover {
     color: var(--accent);
-    transform: translateY(-2px);
 }
 
 /* RESUME */
 .resume-link {
-    margin-top: 12px;
-    font-size: 12px;
+    margin-top: 14px;
+    font-size: 13px;
     color: var(--muted);
     text-decoration: none;
 }
@@ -108,28 +108,26 @@ body {
 }
 
 /* =========================
-   MAIN AREA
+   MAIN CONTENT (WIDER + AIRY)
 ========================= */
 .main-content {
-    margin-left: 230px;
-    padding: 40px;
-    max-width: 1050px;
+    margin-left: 280px; /* matches sidebar width */
+    padding: 50px;
+    max-width: 1100px;
 }
 
 /* NAV */
 .nav-links {
     display: flex;
-    gap: 18px;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    gap: 22px;
+    margin-bottom: 35px;
 }
 
 .nav-links a {
     color: var(--muted);
     text-decoration: none;
-    font-size: 13px;
-    padding-bottom: 3px;
-    border-bottom: 2px solid transparent;
+    font-size: 15px; /* 🔥 bigger nav */
 }
 
 .nav-links a:hover {
@@ -137,61 +135,51 @@ body {
     border-bottom: 2px solid var(--accent);
 }
 
-/* HERO STYLE ABOUT */
-#about {
-    background: var(--card);
-    padding: 25px;
-    border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.08);
-    margin-bottom: 20px;
-}
-
-#about h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
 /* SECTIONS */
 section {
     background: var(--card);
-    padding: 22px;
+    padding: 26px;
     border-radius: 14px;
-    margin-bottom: 18px;
+    margin-bottom: 22px;
     border: 1px solid rgba(255,255,255,0.08);
 }
 
 h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: var(--text);
+    font-size: 20px; /* 🔥 bigger headings */
+    margin-bottom: 12px;
+}
+
+/* TEXT */
+section p {
+    font-size: 15px; /* 🔥 readable paragraphs */
+    color: #ddd;
 }
 
 /* EXPERIENCE */
 .job {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .job-title {
-    font-weight: 600;
-    font-size: 15px;
+    font-weight: 700;
+    font-size: 16px;
 }
 
 .job-company {
     font-style: italic;
+    font-size: 14px;
     color: var(--muted);
-    font-size: 13px;
 }
 
 .job-info {
-    font-size: 12px;
-    color: var(--muted);
+    font-size: 13px;
     margin-bottom: 6px;
+    color: var(--muted);
 }
 
 .job ul {
     padding-left: 18px;
-    font-size: 13px;
-    color: var(--text);
+    font-size: 14px;
 }
 
 /* CERTS */
@@ -203,8 +191,8 @@ h2 {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 13px;
-    margin-bottom: 8px;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .cert-list i {
@@ -219,12 +207,16 @@ h2 {
 
 /* MOBILE */
 @media (max-width: 768px) {
-    body { flex-direction: column; }
+    body {
+        flex-direction: column;
+    }
+
     .sidebar {
         width: 100%;
         height: auto;
         position: relative;
     }
+
     .main-content {
         margin-left: 0;
         padding: 20px;
@@ -296,34 +288,6 @@ I transitioned into cybersecurity after experiencing a real-world cyber scam tha
 <li>Investigate incidents and policy violations in a high-security environment.</li>
 <li>Maintain situational awareness and respond to security events.</li>
 <li>Document findings in detailed reports for compliance and audits.</li>
-</ul>
-</div>
-
-<div class="job">
-<p class="job-title">Human Services Caseworker</p>
-<p class="job-company">Illinois Department of Human Services</p>
-<p class="job-info">January 2019 – August 2019</p>
-<ul>
-<li>Analyzed case data and verified accuracy across systems.</li>
-<li>Ensured compliance with regulations and policies.</li>
-</ul>
-</div>
-
-<div class="job">
-<p class="job-title">TANF Caseworker</p>
-<p class="job-company">Illinois Department of Human Services</p>
-<p class="job-info">September 2018 – January 2019</p>
-<ul>
-<li>Investigated cases and resolved discrepancies.</li>
-</ul>
-</div>
-
-<div class="job">
-<p class="job-title">Social Service Career Trainee</p>
-<p class="job-company">Illinois Department of Human Services</p>
-<p class="job-info">September 2017 – September 2018</p>
-<ul>
-<li>Handled sensitive data with strict confidentiality controls.</li>
 </ul>
 </div>
 
