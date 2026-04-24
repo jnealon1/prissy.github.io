@@ -314,3 +314,416 @@ I transitioned into cybersecurity after experiencing a real-world cyber scam tha
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jacquetta A. Nealon | Cybersecurity Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    display: flex;
+    background: #f4f4f9;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 200px;
+    position: fixed;
+    height: 100vh;
+    background: #2c2f48;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+/* PROFILE PHOTO WITH HOVER EFFECT */
+.profile-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 10px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.profile-photo:hover {
+    transform: scale(1.08);
+    border-color: #4da6ff;
+    box-shadow: 0 0 15px rgba(77,166,255,0.6);
+}
+
+.sidebar h2 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.sidebar-section h2 {
+    font-size: 12px;
+    border-bottom: 2px solid white;
+    width: 100%;
+    padding-bottom: 4px;
+    margin-top: 10px;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    font-size: 12px;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+.icon-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* ICON HOVER FIX */
+.icon-link {
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-link:hover {
+    transform: scale(1.2);
+    color: #4da6ff;
+    text-shadow: 0 0 12px rgba(77,166,255,0.7);
+}
+
+/* RESUME LINK */
+.resume-link {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #dcdcdc;
+    text-decoration: none;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.resume-link:hover {
+    color: #4da6ff;
+    transform: scale(1.05);
+    text-shadow: 0 0 12px rgba(77,166,255,0.7);
+}
+
+/* ================= MAIN CONTENT ================= */
+.main-content {
+    margin-left: 200px;
+    width: 100%;
+    padding: 25px;
+    max-width: 1100px;
+}
+
+/* NAV */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+    padding: 12px;
+    background: #2c2f48;
+    border-radius: 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #4da6ff;
+}
+
+/* SECTIONS */
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border-left: 4px solid #4da6ff;
+}
+
+/* EXPERIENCE */
+.job-title { font-weight: 700; }
+.job-company { font-style: italic; font-size: 13px; }
+.job-info { font-size: 13px; margin-bottom: 5px; }
+.job ul { padding-left: 18px; }
+
+/* CREDENTIALS */
+.cert-list {
+    list-style: none;
+}
+
+.cert-list li {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.cert-list i {
+    color: #4da6ff;
+}
+
+/* CONTACT */
+#contact i {
+    color: #4da6ff;
+    margin-right: 8px;
+}
+
+/* FOOTER */
+footer {
+    background: #2c2f48;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 200px;
+    width: calc(100% - 200px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    footer {
+        left: 0;
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <img src="PPhoto.png" class="profile-photo">
+
+    <h2>Jacquetta A. Nealon</h2>
+
+    <div class="sidebar-section">
+        <h2>Focus Areas</h2>
+        <ul>
+            <li>Cybersecurity Fundamentals</li>
+            <li>Threat Detection & Monitoring</li>
+            <li>System Security & Risk Awareness</li>
+            <li>Cloud & Infrastructure Concepts</li>
+        </ul>
+    </div>
+
+    <div class="icon-links">
+        <a href="https://github.com/jnealon1" class="icon-link"><i class="fab fa-github"></i></a>
+        <a href="mailto:jnealon1@gmail.com" class="icon-link"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <a href="resume26.pdf" class="resume-link">⬇ Download Resume</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+<div class="nav-links">
+    <a href="#about">About Me</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About Me</h2>
+<p>
+  I transitioned into cybersecurity after experiencing a real-world cyber scam that exposed how easily attackers can exploit trust and systems. That experience shifted my focus toward understanding how cyber threats are detected, investigated, and prevented. 
+  I have a background in correctional and human services roles, where I developed strong skills in risk assessment, documentation, and operating in structured, security-focused environments. Today, I’m building technical skills in network security, Linux, Python, and cloud fundamentals, with a focus on security operations and threat detection. 
+  I’m especially interested in SOC environments, where monitoring and analysis help stop threats before they escalate. My goal is to contribute to cybersecurity teams by strengthening system defenses and turning threat awareness into actionable protection.
+</p>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+<h2>Education</h2>
+<p>🎓 Associate in Applied Science in Cybersecurity, 2026</p>
+<p>Olive-Harvey College</p>
+<p>🎓 Bachelor of Science in Health Services Management, 2013</p>
+<p>Western Illinois University</p>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<h2>Experience</h2>
+
+<div class="job">
+    <p class="job-title">Correctional Officer</p>
+    <p class="job-company">Cook County Sheriff's Department</p>
+    <p class="job-info">August 2019 – Present | Chicago, IL</p>
+    <ul>
+        <li>Investigate incidents and policy violations in a high-security environment while maintaining continuous situational awareness to identify potential risks. Monitor operations and respond to security events to support containment and resolution efforts. Document observations, incidents, and investigative findings in detailed, accurate reports to support compliance, audits, and internal review.</li>
+    </ul>
+</div>
+
+<div class="job">
+    <p class="job-title">Human Services Caseworker</p>
+    <p class="job-company">Illinois Department of Human Services</p>
+    <p class="job-info">January 2019 – August 2019 | Chicago, Illinois</p>
+    <ul>
+        <li>Analyzed case information across internal databases and external sources to detect inconsistencies and support accurate decision-making. Verified data accuracy through interviews with clients and associated parties. Applied regulatory guidelines and compiled structured investigative documentation for compliance and audits.</li>
+    </ul>
+</div>
+
+<div class="job">
+    <p class="job-title">TANF Caseworker</p>
+    <p class="job-company">Illinois Department of Human Services</p>
+    <p class="job-info">September 2018 – January 2019 | Chicago, Illinois</p>
+    <ul>
+        <li>Investigated cases by analyzing data from multiple sources, conducted interviews, ensured compliance with policies, and documented findings for audits and reviews.</li>
+    </ul>
+</div>
+
+<div class="job">
+    <p class="job-title">Social Service Career Trainee</p>
+    <p class="job-company">Illinois Department of Human Services</p>
+    <p class="job-info">September 2017 – September 2018 | Chicago, Illinois</p>
+    <ul>
+        <li>Handled confidential data, ensured compliance with privacy controls, analyzed case information, and supported risk mitigation and data integrity efforts.</li>
+    </ul>
+</div>
+
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials">
+<h2>Credentials</h2>
+<ul class="cert-list">
+    <li><i class="fas fa-shield-halved"></i> City Colleges of Chicago Advanced Cybersecurity Certification</li>
+    <li><i class="fas fa-user-lock"></i> Google Cybersecurity Certification</li>
+    <li><i class="fas fa-cloud"></i> Amazon AWS Cloud Certification</li>
+</ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+
+<p>
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:rubyrose1@gmail.com">rubyrose1@gmail.com</a>
+</p>
+
+<p>
+    <i class="fab fa-github"></i>
+    <a href="https://github.com/rubyrose1" target="_blank">
+        github.com/rubyrose1
+    </a>
+</p>
+</section>
+
+</div>
+
+</body>
+</html>
+
+
+
