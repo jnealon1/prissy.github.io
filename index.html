@@ -36,26 +36,17 @@ body {
     text-align: center;
 }
 
-/* PROFILE PHOTO */
+/* BIG PROFESSIONAL PHOTO */
 .profile-photo {
-    width: 190px;
-    height: 190px;
+    width: 165px;
+    height: 165px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center top; /* FIXED */
     border: 3px solid white;
     margin-bottom: 12px;
-    transition: all 0.3s ease;
 }
 
-/* HOVER EFFECT */
-.profile-photo:hover {
-    transform: scale(1.06) translateY(-3px);
-    box-shadow: 0 10px 30px rgba(77,166,255,0.4);
-    border-color: #4da6ff;
-}
-
-/* SIDEBAR TEXT */
+/* NAME + FOCUS AREAS */
 .sidebar h2 {
     font-size: 18px;
     margin-bottom: 8px;
@@ -99,7 +90,7 @@ body {
 .resume-link {
     margin-top: 12px;
     font-size: 13px;
-    color: #dcdcdc;
+    color: #d0d0d0;
     text-decoration: none;
 }
 
@@ -107,22 +98,21 @@ body {
     color: #4da6ff;
 }
 
-/* MAIN CONTENT */
+/* MAIN */
 .main-content {
     margin-left: 250px;
     padding: 40px;
-    padding-bottom: 80px; /* prevents footer overlap */
     max-width: 1100px;
 }
 
-/* TOP NAV */
+/* TOP NAV (DARK BLUE + BIGGER) */
 .nav-links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 35px;
-    padding: 18px 0;
+    padding: 20px 0;
     background: #2c2f48;
     border-radius: 10px;
 }
@@ -130,8 +120,9 @@ body {
 .nav-links a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
+    padding-bottom: 4px;
     border-bottom: 2px solid transparent;
 }
 
@@ -152,10 +143,12 @@ section {
 h2 {
     font-size: 20px;
     margin-bottom: 12px;
+    color: #1f2235;
 }
 
 section p {
     font-size: 15px;
+    color: #444;
 }
 
 /* EXPERIENCE */
@@ -165,20 +158,24 @@ section p {
 
 .job-title {
     font-weight: 700;
+    font-size: 15px;
 }
 
 .job-company {
     font-style: italic;
+    color: #555;
     font-size: 13px;
 }
 
 .job-info {
     font-size: 13px;
+    color: #777;
     margin-bottom: 6px;
 }
 
 .job ul {
     padding-left: 18px;
+    font-size: 14px;
 }
 
 /* CERTS */
@@ -188,7 +185,9 @@ section p {
 
 .cert-list li {
     display: flex;
+    align-items: center;
     gap: 10px;
+    font-size: 14px;
     margin-bottom: 8px;
 }
 
@@ -200,18 +199,6 @@ section p {
 #contact i {
     color: #4da6ff;
     margin-right: 8px;
-}
-
-/* FOOTER (FIXED POSITION) */
-footer {
-    background: #2c2f48;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    position: fixed;
-    bottom: 0;
-    left: 230px;
-    width: calc(100% - 230px);
 }
 
 /* MOBILE */
@@ -229,11 +216,6 @@ footer {
     .main-content {
         margin-left: 0;
         padding: 20px;
-    }
-
-    footer {
-        left: 0;
-        width: 100%;
     }
 }
 </style>
@@ -258,11 +240,17 @@ footer {
     </div>
 
     <div class="icon-links">
-        <a href="https://github.com/jnealon1" class="icon-link"><i class="fab fa-github"></i></a>
-        <a href="mailto:jnealon1@gmail.com" class="icon-link"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/jnealon1" class="icon-link">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:jnealon1@gmail.com" class="icon-link">
+            <i class="fas fa-envelope"></i>
+        </a>
     </div>
 
-    <a href="resume26.pdf" download class="resume-link">⬇ Download Resume</a>
+    <a href="resume26.pdf" download class="resume-link">
+        ⬇ Download Resume
+    </a>
 </div>
 
 <!-- MAIN -->
@@ -279,7 +267,7 @@ footer {
 <section id="about">
 <h2>About Me</h2>
 <p>
-I transitioned into cybersecurity after experiencing a real-world cyber scam that exposed how easily attackers can exploit trust and systems...
+I transitioned into cybersecurity after experiencing a real-world cyber scam that exposed how easily attackers can exploit trust and systems. That experience shifted my focus toward understanding how cyber threats are detected, investigated, and prevented. I have a background in correctional and human services roles, where I developed strong skills in risk assessment, documentation, and operating in structured, security-focused environments. Today, I’m building technical skills in network security, Linux, Python, and cloud fundamentals, with a focus on security operations and threat detection. I’m especially interested in SOC environments, where monitoring and analysis help stop threats before they escalate. My goal is to contribute to cybersecurity teams by strengthening system defenses and turning threat awareness into actionable protection.
 </p>
 </section>
 
@@ -324,11 +312,5 @@ I transitioned into cybersecurity after experiencing a real-world cyber scam tha
 
 </div>
 
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Prissy Princess | Cybersecurity Portfolio</p>
-</footer>
-
 </body>
 </html>
-
