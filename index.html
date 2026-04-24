@@ -20,7 +20,7 @@ body {
     background: #f4f4f9;
 }
 
-/* ================= SIDEBAR (RESTORED) ================= */
+/* ================= SIDEBAR ================= */
 .sidebar {
     width: 200px;
     position: fixed;
@@ -55,7 +55,6 @@ body {
     margin-bottom: 12px;
 }
 
-/* FOCUS AREAS (RESTORED) */
 .sidebar-section h2 {
     font-size: 12px;
     border-bottom: 1px solid rgba(255,255,255,0.4);
@@ -90,7 +89,7 @@ body {
     color: #4da6ff;
 }
 
-/* RESUME LINK (RESTORED) */
+/* RESUME */
 .resume-link {
     margin-top: 12px;
     font-size: 12px;
@@ -105,7 +104,7 @@ body {
     transform: scale(1.05);
 }
 
-/* MAIN CONTENT */
+/* MAIN */
 .main-content {
     margin-left: 200px;
     width: 100%;
@@ -149,18 +148,16 @@ body {
     width: 100%;
 }
 
-/* ================= SECTION HIERARCHY ================= */
+/* SECTIONS */
 section {
     background: white;
     padding: 26px;
     margin-bottom: 26px;
     border-radius: 12px;
     border-left: 4px solid #4da6ff;
-
     opacity: 0;
     transform: translateY(18px);
     animation: fadeIn 0.7s ease forwards;
-
     transition: 0.25s ease;
 }
 
@@ -169,7 +166,6 @@ section:hover {
     box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
-/* stagger */
 section:nth-of-type(1) { animation-delay: 0.05s; }
 section:nth-of-type(2) { animation-delay: 0.10s; }
 section:nth-of-type(3) { animation-delay: 0.15s; }
@@ -183,7 +179,6 @@ section:nth-of-type(5) { animation-delay: 0.25s; }
     }
 }
 
-/* SECTION HEADERS */
 section h2 {
     font-size: 22px;
     font-weight: 800;
@@ -191,26 +186,7 @@ section h2 {
     margin-bottom: 12px;
 }
 
-/* ABOUT ME */
-#about p {
-    font-size: 15.5px;
-    line-height: 1.6;
-}
-
-/* EXPERIENCE EMPHASIS */
-#experience {
-    border-left: 6px solid #4da6ff;
-}
-
-.job-title { font-weight: 700; }
-.job-company { font-style: italic; font-size: 13px; }
-.job-info { font-size: 13px; margin-bottom: 5px; }
-
-.job ul {
-    padding-left: 18px;
-}
-
-/* ================= CREDENTIALS (CLEAN LIST - NO BADGES) ================= */
+/* CREDENTIALS */
 .cert-list {
     list-style: none;
     padding-left: 0;
@@ -234,12 +210,6 @@ section h2 {
     color: #4da6ff;
 }
 
-/* CONTACT */
-#contact i {
-    color: #4da6ff;
-    margin-right: 8px;
-}
-
 /* FOOTER */
 .site-footer {
     text-align: center;
@@ -251,33 +221,18 @@ section h2 {
     font-size: 13px;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-    .main-content {
-        margin-left: 0;
-        padding-bottom: 80px;
-    }
+    body { flex-direction: column; }
+    .sidebar { width: 100%; height: auto; position: relative; }
+    .main-content { margin-left: 0; padding-bottom: 80px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- SIDEBAR RESTORED -->
 <div class="sidebar">
-
     <img src="PPhoto.png" class="profile-photo">
-
     <h2>Jacquetta A. Nealon</h2>
 
     <div class="sidebar-section">
@@ -310,38 +265,28 @@ section h2 {
 
 <section id="about">
 <h2>About Me</h2>
-<p>I transitioned into cybersecurity after experiencing a real-world cyber scam...</p>
+<p>Your content here...</p>
 </section>
 
 <section id="education">
 <h2>Education</h2>
-<p>🎓 Associate in Applied Science in Cybersecurity, 2026</p>
-<p>Olive-Harvey College</p>
 </section>
 
 <section id="experience">
 <h2>Experience</h2>
-<div class="job">
-    <p class="job-title">Correctional Officer</p>
-    <p class="job-company">Cook County Sheriff's Department</p>
-</div>
 </section>
 
 <section id="credentials">
 <h2>Credentials</h2>
-
 <ul class="cert-list">
     <li><i class="fas fa-shield-halved"></i> City Colleges of Chicago Advanced Cybersecurity Certification</li>
     <li><i class="fas fa-user-lock"></i> Google Cybersecurity Certification</li>
     <li><i class="fas fa-cloud"></i> Amazon AWS Cloud Certification</li>
 </ul>
-
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
-<p><i class="fas fa-envelope"></i> <a href="mailto:jnealon1@gmail.com">jnealon1@gmail.com</a></p>
-<p><i class="fab fa-github"></i> <a href="https://github.com/jnealon1">github.com/jnealon1</a></p>
 </section>
 
 <footer class="site-footer">
@@ -352,4 +297,3 @@ section h2 {
 
 </body>
 </html>
-
