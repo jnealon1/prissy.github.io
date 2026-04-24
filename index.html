@@ -16,14 +16,14 @@
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    background: #f4f4f9; /* ✅ ORIGINAL LIGHT BACKGROUND */
+    background: #f4f4f9;
     display: flex;
     color: #333;
     line-height: 1.6;
 }
 
 /* =========================
-   SIDEBAR (CLEAN + MODERN)
+   SIDEBAR
 ========================= */
 .sidebar {
     width: 230px;
@@ -34,38 +34,42 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 15px;
+    padding: 22px 15px;
     text-align: center;
 }
 
+/* 🔥 BIGGER PROFESSIONAL PHOTO */
 .profile-photo {
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid white;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
+/* 🔥 NAME + TEXT PURE WHITE */
 .sidebar h2 {
-    font-size: 17px;
+    font-size: 18px;
     margin-bottom: 8px;
+    color: #ffffff;
 }
 
 .sidebar-section h2 {
     font-size: 13px;
     margin-top: 14px;
     padding-bottom: 6px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #ffffff;
     width: 100%;
+    color: #ffffff;
 }
 
 .sidebar-section ul {
     list-style: none;
     font-size: 13px;
-    color: #d0d3e2;
     margin-top: 10px;
     line-height: 1.5;
+    color: #ffffff; /* 🔥 focus areas now white */
 }
 
 /* ICONS */
@@ -88,7 +92,7 @@ body {
 .resume-link {
     margin-top: 12px;
     font-size: 13px;
-    color: #b0b3c6;
+    color: #dcdcdc;
     text-decoration: none;
 }
 
@@ -106,24 +110,24 @@ body {
 }
 
 /* =========================
-   TOP NAV (MADE BIGGER)
+   TOP NAV (DARK BLUE NOW)
 ========================= */
 .nav-links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px; /* 🔥 bigger spacing */
+    gap: 30px;
     margin-bottom: 35px;
     padding: 18px 0;
-    background: white;
+    background: #2c2f48; /* 🔥 DARK BLUE MATCHING SIDEBAR */
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #2c2f48;
-    font-size: 16px; /* 🔥 BIGGER TEXT */
+    color: #ffffff; /* white text for contrast */
+    font-size: 16px;
     font-weight: 600;
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
@@ -134,7 +138,7 @@ body {
 }
 
 /* =========================
-   SECTIONS (CLEAN CARDS)
+   SECTIONS
 ========================= */
 section {
     background: white;
@@ -151,7 +155,6 @@ h2 {
     color: #1f2235;
 }
 
-/* TEXT */
 section p {
     font-size: 15px;
     color: #444;
@@ -222,11 +225,6 @@ section p {
     .main-content {
         margin-left: 0;
         padding: 20px;
-    }
-
-    .nav-links {
-        gap: 15px;
-        font-size: 14px;
     }
 }
 </style>
